@@ -13,6 +13,7 @@
     --shadow: rgba(43,33,48,0.10);
     --focus: #4F6B45;
     --on-sage: #FFFFFF;
+    --poppy: #C0392B;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
@@ -29,6 +30,7 @@
       --shadow: rgba(0,0,0,0.35);
       --focus: #9BB98B;
       --on-sage: #221A26;
+      --poppy: #E3705C;
     }
   }
   :root[data-theme="dark"]{
@@ -45,6 +47,7 @@
     --shadow: rgba(0,0,0,0.35);
     --focus: #9BB98B;
     --on-sage: #221A26;
+    --poppy: #E3705C;
   }
 
   *{box-sizing:border-box;}
@@ -233,6 +236,31 @@
     animation:draw 2.1s ease forwards;
   }
   @keyframes draw{to{stroke-dashoffset:0;}}
+  /* Papaveri: steli in verde salvia, petali rossi (riempiti col colore di sfondo,
+     così i petali davanti coprono quelli dietro), centro in colore testo. */
+  .hero-draw .stem{stroke:var(--sage-dark);stroke-width:2.4;}
+  .hero-draw .stem.thin{stroke-width:2;}
+  .hero-draw .petal{stroke:var(--poppy);stroke-width:2.4;fill:var(--paper);}
+  .hero-draw .fold{stroke:var(--poppy);stroke-width:1.5;}
+  .hero-draw .core{stroke:var(--ink);stroke-width:1.8;}
+
+  /* Sotto gli 860px la hero è a una colonna: il disegno diventa una filigrana
+     nell'angolo in alto a destra, dietro al testo, senza allungare la pagina. */
+  @media (max-width:860px){
+    .hero{overflow:hidden;}
+    .hero .wrap{position:relative;}
+    .hero-grid > div:first-child{position:relative;z-index:1;}
+    .hero-art{
+      position:absolute;z-index:0;
+      top:clamp(20px, 8vw, 64px);right:2.5vw;
+      width:clamp(170px, 52vw, 300px);max-width:none;margin:0;
+      opacity:.52;pointer-events:none;
+    }
+  }
+  /* Tablet: il titolo è breve, quindi i fiori stanno in alto accanto ad esso */
+  @media (min-width:600px) and (max-width:860px){
+    .hero-art{top:-14px;right:3vw;width:240px;}
+  }
 
   /* ============ Section headings ============ */
   .sec-head{max-width:640px;margin-bottom:52px;}
@@ -389,7 +417,6 @@
     .hero-actions{flex-direction:column;align-items:stretch;gap:6px;margin-top:24px;}
     .hero-actions .btn-primary{text-align:center;padding:17px 24px;}
     .hero-actions .btn-ghost{align-self:center;}
-    .hero-art{max-width:190px;margin:0 auto;}
 
     .portrait{max-width:240px;aspect-ratio:1/1;margin:0 auto;}
     .servizio{padding:26px 22px;}
