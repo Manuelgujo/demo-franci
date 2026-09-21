@@ -17,7 +17,11 @@ permalink: /blog/
     <div class="blog-grid">
       {% for post in site.posts %}
       <a class="post-card" href="{{ post.url | relative_url }}" style="text-decoration:none;">
-        <span class="tag">{{ post.category }}</span>
+        {% assign raw = post.categories | default: post.category %}
+{% assign cats = raw | join: ',' | split: ',' %}
+      {% for cat in cats %}
+        <span class="tag">{{ cat | strip }}</span>
+      {% endfor %}
         <span class="post-date">{{ post.date | date: "%-d %B %Y" }}</span>
         <h3>{{ post.title }}</h3>
         <p>{{ post.excerpt | default: post.description }}</p>

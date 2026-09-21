@@ -2,7 +2,8 @@
 title: "Il dialogo che (ri)costruisce una coppia"
 description: "Molte crisi di coppia non nascono dalla mancanza di amore, ma dalla perdita di un linguaggio comune."
 excerpt: "Molte crisi di coppia non nascono dalla mancanza di amore, ma dalla perdita di un linguaggio comune..."
-category: Coppia
+categories:
+  - Coppia
 ---
 Nel lavoro con le coppie, noto spesso che il problema principale non è la mancanza di amore o di volontà, ma la perdita di un linguaggio condiviso. Con il tempo, ogni coppia sviluppa modi di comunicare che possono diventare rigidi: si finisce per rispondere a schemi automatici invece che alla persona che si ha davanti in quel momento.
 

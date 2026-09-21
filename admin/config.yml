@@ -18,6 +18,17 @@ media_folder: "assets/img/uploads"
 public_folder: "/assets/img/uploads"
 
 collections:
+  - name: "categories"
+    label: "Categorie"
+    label_singular: "Categoria"
+    folder: "_categories"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    fields:
+      - { label: "Nome categoria", name: "title", widget: "string", required: true }
+      - { label: "Slug", name: "slug", widget: "string", required: true, hint: "URL amichevole, es. ansia-e-stress (senza spazi, solo lettere, numeri e trattini)" }
+
   - name: "blog"
     label: "Articoli del blog"
     label_singular: "Articolo"
@@ -28,10 +39,15 @@ collections:
     fields:
       - { label: "Titolo", name: "title", widget: "string" }
       - { label: "Data di pubblicazione", name: "date", widget: "datetime" }
-      - label: "Categoria"
-        name: "category"
-        widget: "select"
-        options: ["Consapevolezza", "Ansia e stress", "Coppia", "Giovani adulti"]
+      - label: "Categorie"
+        name: "categories"
+        widget: "relation"
+        collection: "categories"
+        search_fields: ["title"]
+        display_fields: ["title"]
+        value_field: "title"
+        multiple: true
+        required: false
       - label: "Anteprima breve"
         name: "excerpt"
         widget: "text"

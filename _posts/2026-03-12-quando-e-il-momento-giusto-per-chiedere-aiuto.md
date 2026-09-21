@@ -2,7 +2,8 @@
 title: "Quando è il momento giusto per chiedere aiuto?"
 description: "Non esiste una soglia di sofferenza da superare prima di potersi rivolgere a uno psicoterapeuta."
 excerpt: "Non esiste una soglia di sofferenza da superare prima di potersi rivolgere a uno psicoterapeuta..."
-category: Consapevolezza
+categories:
+  - Consapevolezza
 ---
 Una delle domande che sento più spesso, anche da chi mi scrive per la prima volta, è: "Ma la mia situazione è abbastanza grave da giustificare una terapia?". È una domanda comprensibile, ma parte da un'idea che vorrei mettere in discussione: non esiste una soglia di sofferenza da superare prima di avere il diritto di chiedere aiuto.
 
