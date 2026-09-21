@@ -1,0 +1,28 @@
+---
+layout: default
+title: "Blog | Francesca Pirazzo — Psicoterapeuta a Milano"
+description: "Riflessioni e spunti su psicoterapia, ansia, coppia e benessere emotivo, a cura della Dott.ssa Francesca Pirazzo."
+permalink: /blog/
+---
+<section class="hero" style="padding:60px 0 0;">
+  <div class="wrap">
+    <div class="sec-head">
+      <h1 style="font-size:clamp(1.9rem,4vw,2.6rem);">Dal blog</h1>
+      <p>Riflessioni e spunti su psicoterapia, relazioni e benessere emotivo.</p>
+    </div>
+  </div>
+</section>
+<section style="padding-top:10px;">
+  <div class="wrap">
+    <div class="blog-grid">
+      {% for post in site.posts %}
+      <a class="post-card" href="{{ post.url | relative_url }}" style="text-decoration:none;">
+        <span class="tag">{{ post.category }}</span>
+        <span class="post-date">{{ post.date | date: "%-d %B %Y" }}</span>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | default: post.description }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

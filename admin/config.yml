@@ -1,0 +1,44 @@
+# ============================================================
+# Configurazione di Sveltia CMS.
+# IMPORTANTE prima di andare online:
+# - sostituisci "TUO-USERNAME/TUO-REPO" con il nome reale
+#   del tuo repository GitHub (es. francescapirazzo/sito-web)
+# - se il branch principale del repo si chiama "master" invece
+#   di "main", cambia anche quello qui sotto
+# ============================================================
+
+backend:
+  name: github
+  repo: TUO-USERNAME/TUO-REPO
+  branch: main
+  # Nessun OAuth backend necessario: Francesca farà login con un
+  # Personal Access Token di GitHub (vedi README per come generarlo).
+
+media_folder: "assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+collections:
+  - name: "blog"
+    label: "Articoli del blog"
+    label_singular: "Articolo"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Data di pubblicazione", name: "date", widget: "datetime" }
+      - label: "Categoria"
+        name: "category"
+        widget: "select"
+        options: ["Consapevolezza", "Ansia e stress", "Coppia", "Giovani adulti"]
+      - label: "Anteprima breve"
+        name: "excerpt"
+        widget: "text"
+        hint: "Il testo che appare nella card del blog e nei risultati di ricerca Google. 1-2 frasi."
+      - label: "Meta description SEO (opzionale)"
+        name: "description"
+        widget: "text"
+        required: false
+        hint: "Se lasci vuoto, verrà usata l'anteprima breve."
+      - { label: "Contenuto dell'articolo", name: "body", widget: "markdown" }

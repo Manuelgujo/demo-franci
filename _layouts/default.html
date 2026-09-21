@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'it' }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- jekyll-seo-tag genera automaticamente: title, meta description,
+     canonical, Open Graph, Twitter Card — l'equivalente di Yoast,
+     leggendo title/description dal front matter di ogni pagina. -->
+{% seo %}
+
+{% if page.structured_data %}
+<script type="application/ld+json">
+{{ page.structured_data | jsonify }}
+</script>
+{% endif %}
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127807;</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+</head>
+<body>
+{% include header.html %}
+<main id="top">
+{{ content }}
+</main>
+{% include footer.html %}
+<script>
+  const burger = document.getElementById('burger');
+  const navlinks = document.getElementById('navlinks');
+  if (burger) {
+    burger.addEventListener('click', () => {
+      const open = navlinks.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navlinks.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    }));
+  }
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+</script>
+{% if page.extra_js %}{{ page.extra_js }}{% endif %}
+</body>
+</html>

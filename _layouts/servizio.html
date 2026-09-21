@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<div class="wrap" style="padding-top:32px;">
+  <p style="font-size:.88rem;color:var(--ink-soft);margin-bottom:0;">
+    <a href="{{ '/' | relative_url }}" style="border-bottom:1px solid var(--line);text-decoration:none;">Home</a>
+    &nbsp;/&nbsp;
+    <a href="{{ '/#servizi' | relative_url }}" style="border-bottom:1px solid var(--line);text-decoration:none;">Servizi</a>
+    &nbsp;/&nbsp; {{ page.title }}
+  </p>
+</div>
+
+<section class="hero" style="padding:40px 0 20px;">
+  <div class="wrap">
+    <h1 style="font-size:clamp(2rem,4vw,2.9rem);max-width:18ch;">{{ page.h1 | default: page.title }}</h1>
+    <p class="lede measure" style="margin-top:14px;">{{ page.lede }}</p>
+    <div class="hero-actions"><a href="{{ '/#prenotazione' | relative_url }}" class="btn-primary">Prenota un primo colloquio</a></div>
+  </div>
+</section>
+
+<section style="padding-top:20px;">
+  <div class="wrap" style="display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start;">
+    <div class="measure-wide">{{ content }}</div>
+    <div class="servizio" style="cursor:default;">
+      <h3 style="margin-bottom:14px;">Per chi è pensato</h3>
+      <ul style="list-style:none;padding:0;margin:0;">
+        {% for b in page.per_chi %}
+        <li style="display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="var(--sage-dark)" stroke-width="1.8" style="width:20px;height:20px;flex:none;margin-top:2px;"><path d="M4 12l6 6L20 6"/></svg>
+          <span>{{ b }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% if page.faq %}
+<section class="band">
+  <div class="wrap" style="max-width:800px;">
+    <div class="sec-head" style="margin-bottom:24px;"><h2>Domande frequenti</h2></div>
+    <div class="faq-wrap">
+      {% for item in page.faq %}
+      <details class="faq-item">
+        <summary>{{ item.q }}<span class="plus">+</span></summary>
+        <p>{{ item.a }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

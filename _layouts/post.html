@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<section style="padding-top:60px;">
+  <div class="wrap" style="max-width:70ch;">
+    <a href="{{ '/blog/' | relative_url }}" class="back-link">&larr; Torna al blog</a>
+    <article>
+      <span class="tag">{{ page.category }}</span>
+      <h1 style="font-size:1.9rem;margin-top:14px;">{{ page.title }}</h1>
+      <span class="post-date" style="display:block;margin-bottom:22px;">{{ page.date | date: "%-d %B %Y" }}</span>
+      {{ content }}
+    </article>
+  </div>
+</section>

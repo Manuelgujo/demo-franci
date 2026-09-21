@@ -1,0 +1,64 @@
+title: "Francesca Pirazzo — Psicoterapeuta"
+description: "Psicoterapeuta specializzata in psicoterapia integrata a Milano. Percorsi individuali, di coppia e per giovani adulti, in studio e online."
+url: "https://www.francescapirazzo.it"
+lang: it
+locale: it_IT
+author: "Francesca Pirazzo"
+twitter:
+  username: francescapirazzo
+  card: summary
+
+# ============================================================
+# NAP (Nome, indirizzo, telefono) — un'unica fonte di verità.
+# Cambia questi valori QUI e si aggiornano ovunque nel sito
+# (footer, privacy policy, dati strutturati) automaticamente.
+# ============================================================
+nap:
+  name: "Dott.ssa Francesca Pirazzo"
+  street: "Via degli Ontani 12"
+  postal_code: "20100"
+  city: "Milano"
+  province: "MI"
+  country: "IT"
+  phone: "+39 000 000 0000"
+  phone_link: "+390000000000"
+  email: "info@francescapirazzo.it"
+  piva: "00000000000"
+  albo: "Iscrizione Albo degli Psicologi n. 00000"
+  school: "Scuola di Psicoterapia Integrata"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# URL puliti per gli articoli: /blog/nome-articolo/
+# invece del default di Jekyll /anno/mese/giorno/nome-articolo.html
+permalink: /blog/:title/
+
+collections:
+  servizi:
+    output: true
+    permalink: /servizi/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "servizi"
+    values:
+      layout: "servizio"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules

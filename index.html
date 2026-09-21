@@ -1,0 +1,248 @@
+---
+layout: default
+title: "Francesca Pirazzo | Psicoterapeuta a Milano — Studio di psicoterapia integrata"
+description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia integrata. Percorsi individuali, di coppia e per giovani adulti a Milano e online. Prenota un primo colloquio."
+structured_data:
+  "@context": "https://schema.org"
+  "@type": "Psychologist"
+  "name": "Francesca Pirazzo"
+  "url": "https://www.francescapirazzo.it/"
+  "description": "Psicoterapeuta specializzata in psicoterapia integrata. Percorsi individuali, di coppia e per giovani adulti, a Milano e online."
+  "areaServed": "Milano"
+  "telephone": "+39 000 000 0000"
+  "email": "info@francescapirazzo.it"
+  "address":
+    "@type": "PostalAddress"
+    "streetAddress": "Via degli Ontani 12"
+    "postalCode": "20100"
+    "addressLocality": "Milano"
+    "addressRegion": "MI"
+    "addressCountry": "IT"
+  "alumniOf":
+    "@type": "EducationalOrganization"
+    "name": "Scuola di Psicoterapia Integrata"
+---
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Uno spazio per capirsi,<br>senza fretta.</h1>
+      <p class="lede measure">Sono Francesca Pirazzo, psicoterapeuta. Accompagno adulti, coppie e giovani adulti in percorsi di psicoterapia integrata, a Milano e online — con l'idea che ogni persona porti con sé un modo unico di stare al mondo, da ascoltare prima ancora che da correggere.</p>
+      <div class="hero-actions">
+        <a href="#prenotazione" class="btn-primary">Prenota un primo colloquio</a>
+        <a href="#chi-sono" class="btn-ghost">Scopri il mio percorso</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg class="hero-draw" viewBox="0 0 360 420" fill="none" stroke="currentColor" style="color:var(--sage-dark)">
+        <path d="M180 400 C170 320 150 300 120 280 C90 260 70 230 75 190" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M180 400 C190 310 210 290 245 265 C275 245 290 210 282 165" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M180 400 C180 300 180 250 180 170" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M180 250 C160 235 145 235 128 245" stroke-width="2" stroke-linecap="round"/>
+        <path d="M180 210 C202 197 218 197 235 208" stroke-width="2" stroke-linecap="round"/>
+        <path d="M75 190 C64 178 64 162 74 150" stroke-width="2" stroke-linecap="round"/>
+        <path d="M282 165 C295 156 297 140 288 126" stroke-width="2" stroke-linecap="round"/>
+        <path d="M180 170 C180 150 172 138 156 130" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="180" cy="120" r="10" stroke-width="2.4" fill="var(--paper)"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHI SONO ===== -->
+<section id="chi-sono">
+  <div class="wrap chisono-grid">
+    <div>
+      <div class="portrait">
+        <svg viewBox="0 0 200 200" fill="none" stroke="var(--ink)" stroke-width="1.6">
+          <circle cx="100" cy="78" r="34"/>
+          <path d="M46 176c6-40 30-58 54-58s48 18 54 58"/>
+          <path d="M78 66c6 10 16 14 22 14s16-4 22-14"/>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <div class="sec-head" style="margin-bottom:20px;"><h2>Chi sono</h2></div>
+      <p class="measure-wide">Mi chiamo Francesca Pirazzo e da anni accompagno persone, coppie e giovani adulti in momenti di cambiamento, fatica o ricerca di sé. Ho conseguito la specializzazione presso la <strong>Scuola di Psicoterapia Integrata</strong>, un approccio che mi permette di non seguire un unico modello rigido, ma di costruire insieme alla persona il percorso più adatto a lei — integrando ascolto, corpo, relazioni e storia personale.</p>
+      <p class="measure-wide">Credo in una psicoterapia che non giudica e non ha fretta di arrivare a una soluzione: prima di tutto, si tratta di sentirsi davvero ascoltati. Il mio studio è un luogo pensato per essere accogliente quanto lo è la relazione che si costruisce al suo interno.</p>
+      <ul class="credentials">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l6 6L20 6"/></svg> Laurea in Psicologia Clinica</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l6 6L20 6"/></svg> Specializzazione in Psicoterapia Integrata — Scuola di Psicoterapia Integrata</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l6 6L20 6"/></svg> Iscritta all'Albo degli Psicologi</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l6 6L20 6"/></svg> Percorsi in studio a Milano e online</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVIZI ===== -->
+<section id="servizi" class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Come posso aiutarti</h2>
+      <p>Ogni percorso nasce da un ascolto attento: questi sono alcuni degli ambiti in cui lavoro più spesso.</p>
+    </div>
+    <div class="servizi-grid">
+      {% for s in site.servizi %}
+      <a class="servizio" href="{{ s.url | relative_url }}">
+        {{ s.icon }}
+        <h3>{{ s.card_title }}</h3>
+        <p>{{ s.card_excerpt }}</p>
+        <span class="servizio-link">Scopri di più</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ===== COME FUNZIONA ===== -->
+<section id="come-funziona">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Come funziona il percorso</h2>
+      <p>Tre passaggi semplici per iniziare, senza nessun obbligo a proseguire.</p>
+    </div>
+    <div class="timeline">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Primo contatto</h3>
+        <p>Scrivimi attraverso il form di richiesta: ti risponderò entro 48 ore per fissare un primo colloquio.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Colloquio conoscitivo</h3>
+        <p>Un incontro, in studio o online, per capire insieme cosa ti porta qui e di cosa hai bisogno.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Il percorso</h3>
+        <p>Costruiamo insieme un percorso su misura, con incontri settimanali o quindicinali.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG (anteprima ultimi 3 articoli) ===== -->
+<section id="blog" class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Dal blog</h2>
+      <p>Riflessioni e spunti su psicoterapia, relazioni e benessere emotivo.</p>
+    </div>
+    <div class="blog-grid">
+      {% for post in site.posts limit:3 %}
+      <a class="post-card" href="{{ post.url | relative_url }}" style="text-decoration:none;">
+        <span class="tag">{{ post.category }}</span>
+        <span class="post-date">{{ post.date | date: "%-d %B %Y" }}</span>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | default: post.description }}</p>
+      </a>
+      {% endfor %}
+    </div>
+    <p style="margin-top:32px;"><a href="{{ '/blog/' | relative_url }}" class="btn-ghost">Vedi tutti gli articoli</a></p>
+  </div>
+</section>
+
+<!-- ===== PRENOTAZIONE ===== -->
+<section id="prenotazione">
+  <div class="wrap booking-wrap">
+    <div>
+      <div class="sec-head" style="margin-bottom:24px;">
+        <h2>Prenota un primo colloquio</h2>
+        <p>Compila il form con qualche informazione: ti risponderò personalmente entro 48 ore per fissare insieme data e modalità dell'incontro.</p>
+      </div>
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Le sedute si svolgono solo in studio?<span class="plus">+</span></summary>
+          <p>No: propongo incontri sia in studio, a Milano, sia online, per chi preferisce seguire il percorso da casa o vive lontano.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Quanto dura un percorso di psicoterapia?<span class="plus">+</span></summary>
+          <p>Dipende dalla persona e da ciò che porta: alcuni percorsi si concentrano su un obiettivo preciso e durano poche settimane, altri accompagnano un cambiamento più profondo. Ne parliamo insieme fin dal primo colloquio.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Come si svolge il primo colloquio?<span class="plus">+</span></summary>
+          <p>È un incontro pensato per conoscersi: racconti cosa ti porta a chiedere supporto e insieme valutiamo se e come proseguire, senza nessun impegno a continuare.</p>
+        </details>
+      </div>
+    </div>
+    <div>
+      <form class="booking-form" id="booking-form" novalidate>
+        <div class="row2">
+          <div class="field"><label for="nome">Nome</label><input type="text" id="nome" name="nome" required></div>
+          <div class="field"><label for="cognome">Cognome</label><input type="text" id="cognome" name="cognome" required></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+          <div class="field"><label for="telefono">Telefono</label><input type="tel" id="telefono" name="telefono"></div>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="motivo">Motivo della richiesta</label>
+            <select id="motivo" name="motivo">
+              <option>Percorso individuale</option>
+              <option>Terapia di coppia</option>
+              <option>Ansia e stress</option>
+              <option>Giovani adulti</option>
+              <option>Altro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fascia">Fascia oraria preferita</label>
+            <select id="fascia" name="fascia">
+              <option>Mattina</option><option>Pomeriggio</option><option>Sera</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="messaggio">Vuoi aggiungere qualcosa? (facoltativo)</label>
+          <textarea id="messaggio" name="messaggio" placeholder="Scrivi qui, se lo desideri, qualche riga su cosa ti porta a scrivermi."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;">Invia richiesta</button>
+        <p class="form-note">Riceverai una risposta via email entro 48 ore. In alternativa puoi scrivere direttamente a <a href="mailto:{{ site.nap.email }}" style="color:inherit;">{{ site.nap.email }}</a>.</p>
+      </form>
+      <div id="booking-success">
+        <h3 style="margin-bottom:10px;">Richiesta inviata</h3>
+        <p style="color:var(--ink-soft);margin:0;">Grazie<span id="success-name"></span>, la tua richiesta è stata registrata. Ti risponderò personalmente entro 48 ore all'indirizzo email indicato per fissare il primo colloquio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTATTI ===== -->
+<section id="contatti" class="band">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="sec-head" style="margin-bottom:24px;">
+        <h2>Contatti</h2>
+        <p>Puoi scrivermi o chiamarmi direttamente, oltre a usare il form di prenotazione.</p>
+      </div>
+      <ul class="contact-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><span>{{ site.nap.street }}, {{ site.nap.postal_code }} {{ site.nap.city }} ({{ site.nap.province }})</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg><a href="mailto:{{ site.nap.email }}">{{ site.nap.email }}</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 3.2 2 2 0 0 1 4.1 1h2a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L7.1 8.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg><a href="tel:{{ site.nap.phone_link }}">{{ site.nap.phone }}</a></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span>Lun–Ven, 9:00–19:00 (studio e online)</span></li>
+      </ul>
+    </div>
+    <div class="map-illo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.8"/></svg>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('booking-form');
+  const success = document.getElementById('booking-success');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if(!form.checkValidity()){ form.reportValidity(); return; }
+      const nome = document.getElementById('nome').value.trim();
+      document.getElementById('success-name').textContent = nome ? ', ' + nome : '';
+      form.classList.add('hide');
+      success.classList.add('show');
+      success.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+  }
+</script>
