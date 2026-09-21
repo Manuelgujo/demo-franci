@@ -9,7 +9,7 @@
 
 backend:
   name: github
-  repo: TUO-USERNAME/TUO-REPO
+  repo: Manuelgujo/demo-franci
   branch: main
   # Nessun OAuth backend necessario: Francesca farà login con un
   # Personal Access Token di GitHub (vedi README per come generarlo).
