@@ -84,9 +84,10 @@ structured_data:
       <p>Ogni percorso nasce da un ascolto attento: questi sono alcuni degli ambiti in cui lavoro più spesso.</p>
     </div>
     <div class="servizi-grid">
-      {% for s in site.servizi %}
+      {% assign servizi_ordinati = site.servizi | sort: 'order' %}
+      {% for s in servizi_ordinati %}
       <a class="servizio" href="{{ s.url | relative_url }}">
-        {{ s.icon }}
+        {% assign icon_name = s.icon %}{% include icon.html %}
         <h3>{{ s.card_title }}</h3>
         <p>{{ s.card_excerpt }}</p>
         <span class="servizio-link">Scopri di più</span>

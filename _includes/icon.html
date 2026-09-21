@@ -1,0 +1,22 @@
+{%- comment -%}
+  Icone dei servizi. Uso: {% assign icon_name = "heart" %}{% include icon.html %}
+  Per aggiungerne una: nuovo blocco "when" qui sotto + voce nell'elenco "icon" di admin/config.yml.
+  Stile comune: viewBox 24x24, tratto 1.6, nessun riempimento.
+{%- endcomment -%}
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+{%- case icon_name -%}
+{%- when "heart" -%}<path d="M12 21s-7-4.4-9.5-9C.8 8.2 3 4.5 7 4.5c2 0 3.7 1.1 5 3 1.3-1.9 3-3 5-3 4 0 6.2 3.7 4.5 7.5C19 16.6 12 21 12 21Z"/>
+{%- when "star" -%}<path d="M12 3l3 6 6 1-4.5 4 1 6-5.5-3-5.5 3 1-6L3 10l6-1 3-6Z"/>
+{%- when "user" -%}<circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-5 5-7 8-7s6.5 2 8 7"/>
+{%- when "users" -%}<circle cx="8.5" cy="9" r="3.2"/><circle cx="15.5" cy="9" r="3.2"/><path d="M2.5 20c1-4 3.6-6 6-6s5 2 6 6"/><path d="M10 20c1-4 3.6-6 6-6s4.5 1.8 5.5 6"/>
+{%- when "leaf" -%}<path d="M5 19C5 10 10 5 19 5c0 9-5 14-14 14Z"/><path d="M5 19c3-4 6-7 10-9"/>
+{%- when "sprout" -%}<path d="M12 21V10"/><path d="M12 10C12 6 9 3.5 3.5 3.5 3.5 8 6.5 10 12 10Z"/><path d="M12 14.5c0-3.5 2.5-6 8.5-6 0 4-3 6-8.5 6Z"/>
+{%- when "sun" -%}<circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6L7 7M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4"/>
+{%- when "moon" -%}<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/>
+{%- when "chat" -%}<path d="M4 5h16v11h-9.5L4 20V5Z"/><path d="M8 9.5h8M8 12.5h5"/>
+{%- when "compass" -%}<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2Z"/>
+{%- when "shield" -%}<path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/>
+{%- when "home" -%}<path d="M4 11l8-7 8 7v9H4v-9Z"/><path d="M10 20v-6h4v6"/>
+{%- else -%}<circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/>
+{%- endcase -%}
+</svg>

@@ -34,7 +34,7 @@ Se compri un dominio tuo (es. francescapirazzo.it):
    - In "Permissions", imposta **Contents: Read and write**.
    - Genera il token e **copialo subito** (non sarà più visibile dopo).
 3. Consegna questo token a Francesca (via un canale sicuro, es. un messaggio privato) insieme a queste istruzioni:
-   > Vai su `tuosito.it/admin`, incolla il token quando richiesto al primo accesso, e da lì potrai scrivere nuovi articoli con un editor semplice: titolo, categoria, testo, e un bottone "Pubblica". Ogni pubblicazione aggiorna il sito in 1-2 minuti.
+   > Vai su `tuosito.it/admin`, incolla il token quando richiesto al primo accesso, e da lì potrai scrivere nuovi articoli con un editor semplice: titolo, categoria, testo, e un bottone "Pubblica". Nella sezione **Servizi offerti** può anche aggiungere, modificare, riordinare, nascondere o eliminare i servizi (ognuno ha la sua card in homepage e la sua pagina). Ogni pubblicazione aggiorna il sito in 1-2 minuti.
 
 Il token è come una password: **va conservato con cura** e può essere revocato in qualsiasi momento dalla stessa pagina di GitHub in cui è stato creato.
 
@@ -42,7 +42,7 @@ Il token è come una password: **va conservato con cura** e può essere revocato
 
 - **jekyll-seo-tag** genera automaticamente title, meta description, canonical, Open Graph e Twitter Card per ogni pagina — l'equivalente diretto di Yoast, ma nativo di Jekyll.
 - **jekyll-sitemap** rigenera da solo `sitemap.xml` a ogni pubblicazione, includendo automaticamente i nuovi articoli.
-- I dati strutturati (Schema.org) per profilo professionale, servizi e FAQ sono già inclusi nelle pagine principali.
+- I dati strutturati (Schema.org) sono già inclusi: profilo professionale (`Psychologist`) in homepage e, in ogni pagina servizio, `Service` e `FAQPage`, generati in automatico dai campi del servizio (anche per quelli creati dal CMS).
 - Il file NAP (Nome, indirizzo, telefono, P.IVA) è centralizzato in `_config.yml` sotto la chiave `nap:` — cambialo una sola volta lì e si aggiorna ovunque nel sito (footer, contatti, privacy policy).
 
 ## 5. Prima di andare online: cosa personalizzare
@@ -56,8 +56,8 @@ Il token è come una password: **va conservato con cura** e può essere revocato
 ```
 _config.yml          → impostazioni generali del sito + NAP
 _layouts/             → gli "stampi" HTML condivisi (homepage, servizio, articolo)
-_includes/             → header e footer condivisi
-_servizi/              → le 4 pagine dei servizi (una per parola chiave)
+_includes/             → header, footer e icone dei servizi (icon.html)
+_servizi/              → le pagine dei servizi, un file .md ciascuno (gestibili dal CMS)
 _posts/                → gli articoli del blog (un file = un articolo)
 admin/                → il pannello di editing (Sveltia CMS)
 assets/css/style.css   → tutto lo stile del sito
@@ -67,3 +67,11 @@ privacy-policy.html    → informativa privacy
 ```
 
 Per aggiungere un nuovo articolo **senza usare il pannello /admin**, basta anche solo copiare un file esistente in `_posts/`, rinominarlo con la data odierna e modificarne il contenuto — Jekyll farà il resto.
+
+## 7. Gestire i servizi
+
+Dal pannello `/admin` → **Servizi offerti**: nuovo servizio, modifica o eliminazione. Ogni servizio è un file in `_servizi/` con questi campi: nome breve (`card_title`), posizione (`order`, il numero più basso compare prima), icona (`icon`, scelta da un elenco), descrizione della card, titolo e descrizione SEO, titolo della pagina (`h1`), frase introduttiva (`lede`), elenco «Per chi è pensato» (`per_chi`), FAQ (`faq`) e testo in Markdown. Con `published: false` (interruttore «Visibile sul sito») un servizio sparisce da homepage e sito senza essere eliminato.
+
+L'indirizzo della pagina nasce dal nome del file (`_servizi/ansia-e-stress.md` → `/servizi/ansia-e-stress/`); cambiare il nome breve dopo la creazione non modifica l'indirizzo.
+
+**Aggiungere una nuova icona**: inserire un blocco `{% when "nome" %}...` in `_includes/icon.html` (stile 24x24, tratto 1.6, senza riempimento) e una voce nell'elenco `icon` di `admin/config.yml`.

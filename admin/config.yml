@@ -58,3 +58,88 @@ collections:
         required: false
         hint: "Se lasci vuoto, verrà usata l'anteprima breve."
       - { label: "Contenuto dell'articolo", name: "body", widget: "markdown" }
+
+  - name: "servizi"
+    label: "Servizi offerti"
+    label_singular: "Servizio"
+    description: "Ogni servizio ha la sua pagina e la sua card in homepage. Attenzione: se ne elimini uno, la sua pagina sparisce e chi ha il link vedrà un errore. Per nasconderlo solo per un periodo, disattiva «Visibile sul sito»."
+    folder: "_servizi"
+    create: true
+    delete: true
+    extension: "md"
+    format: "frontmatter"
+    identifier_field: "card_title"
+    slug: "{{slug}}"
+    summary: "{{order}} · {{card_title}}"
+    sortable_fields: ["order", "card_title"]
+    fields:
+      - label: "Nome del servizio"
+        name: "card_title"
+        widget: "string"
+        hint: "Il nome breve che compare nella card in homepage, es. «Ansia e stress». Da questo nasce anche l'indirizzo della pagina: cambiarlo dopo la creazione non modifica l'indirizzo."
+      - label: "Posizione nell'elenco"
+        name: "order"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        default: 50
+        hint: "Numero più basso = compare prima in homepage. Per inserire un servizio tra due esistenti, scegli un numero intermedio (es. tra 10 e 20 usa 15)."
+      - label: "Icona"
+        name: "icon"
+        widget: "select"
+        default: "leaf"
+        options:
+          - { label: "Cuore", value: "heart" }
+          - { label: "Stella", value: "star" }
+          - { label: "Persona", value: "user" }
+          - { label: "Coppia / due persone", value: "users" }
+          - { label: "Foglia", value: "leaf" }
+          - { label: "Germoglio", value: "sprout" }
+          - { label: "Sole", value: "sun" }
+          - { label: "Luna", value: "moon" }
+          - { label: "Dialogo", value: "chat" }
+          - { label: "Bussola", value: "compass" }
+          - { label: "Scudo", value: "shield" }
+          - { label: "Casa", value: "home" }
+      - label: "Descrizione breve (card in homepage)"
+        name: "card_excerpt"
+        widget: "text"
+        hint: "1-2 frasi che compaiono sotto il nome nella card."
+      - label: "Titolo per Google (SEO)"
+        name: "title"
+        widget: "string"
+        hint: "Il titolo che appare nei risultati di ricerca. Meglio se contiene il servizio e la città, max ~60 caratteri. Es. «Psicologo per ansia e stress a Milano | Francesca Pirazzo»."
+      - label: "Descrizione per Google (SEO)"
+        name: "description"
+        widget: "text"
+        hint: "Il testo sotto il titolo nei risultati di ricerca. Circa 150-160 caratteri."
+      - label: "Titolo della pagina (H1)"
+        name: "h1"
+        widget: "string"
+        hint: "Il titolo grande in cima alla pagina del servizio."
+      - label: "Frase introduttiva"
+        name: "lede"
+        widget: "text"
+        hint: "Sotto il titolo, prima del pulsante «Prenota»."
+      - label: "Per chi è pensato"
+        name: "per_chi"
+        label_singular: "Punto"
+        widget: "list"
+        hint: "Un elenco breve: ogni riga compare con una spunta nel riquadro laterale."
+        field: { label: "Punto", name: "punto", widget: "string" }
+      - label: "Domande frequenti (FAQ)"
+        name: "faq"
+        label_singular: "Domanda"
+        widget: "list"
+        required: false
+        summary: "{{fields.q}}"
+        hint: "Compaiono in fondo alla pagina e aiutano anche il posizionamento su Google."
+        fields:
+          - { label: "Domanda", name: "q", widget: "string" }
+          - { label: "Risposta", name: "a", widget: "text" }
+      - label: "Visibile sul sito"
+        name: "published"
+        widget: "boolean"
+        default: true
+        hint: "Disattiva per nascondere il servizio (card e pagina) senza eliminarlo."
+      - { label: "Testo della pagina", name: "body", widget: "markdown" }

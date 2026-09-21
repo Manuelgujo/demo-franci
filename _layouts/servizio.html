@@ -6,7 +6,7 @@ layout: default
     <a href="{{ '/' | relative_url }}" style="border-bottom:1px solid var(--line);text-decoration:none;">Home</a>
     &nbsp;/&nbsp;
     <a href="{{ '/#servizi' | relative_url }}" style="border-bottom:1px solid var(--line);text-decoration:none;">Servizi</a>
-    &nbsp;/&nbsp; {{ page.title }}
+    &nbsp;/&nbsp; {{ page.card_title | default: page.title }}
   </p>
 </nav>
 
@@ -19,7 +19,7 @@ layout: default
 </section>
 
 <section style="padding-top:20px;">
-  <div class="wrap" style="display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start;">
+  <div class="wrap service-grid">
     <div class="measure-wide">{{ content }}</div>
     <div class="servizio" style="cursor:default;">
       <h3 style="margin-bottom:14px;">Per chi è pensato</h3>
@@ -49,4 +49,38 @@ layout: default
     </div>
   </div>
 </section>
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": {{ page.h1 | default: page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "serviceType": "Psicoterapia",
+  "areaServed": "Milano",
+  "url": {{ page.url | absolute_url | jsonify }},
+  "provider": {
+    "@type": "Psychologist",
+    "name": {{ site.nap.name | jsonify }},
+    "url": {{ '/' | absolute_url | jsonify }}
+  }
+}
+</script>
+{% if page.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | jsonify }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | jsonify }} }
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>
 {% endif %}
