@@ -1,6 +1,7 @@
 title: "Francesca Pirazzo — Psicoterapeuta"
 description: "Psicoterapeuta specializzata in psicoterapia integrata a Milano. Percorsi individuali, di coppia e per giovani adulti, in studio e online."
-url: "https://www.francescapirazzo.it"
+url: "https://manuelgujo.github.io"
+baseurl: "/demo-franci"   # DEMO: rimuovere (baseurl: "") quando si collega il dominio definitivo
 lang: it
 locale: it_IT
 author: "Francesca Pirazzo"
