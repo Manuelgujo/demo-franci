@@ -3,7 +3,7 @@ card_title: Percorso individuale
 order: 30
 icon: user
 card_excerpt: Per chi attraversa un momento di cambiamento, difficoltà o semplicemente desidera conoscersi meglio.
-title: Psicoterapia individuale a Milano | Francesca Pirazzo
+title: Psicoterapia individuale a Milano
 description: Percorsi di psicoterapia individuale a Milano e online con la Dott.ssa Francesca Pirazzo, per adulti
   che attraversano un cambiamento, una difficoltà o desiderano conoscersi meglio.
 h1: Psicoterapia individuale a Milano

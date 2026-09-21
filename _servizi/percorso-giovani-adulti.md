@@ -3,7 +3,7 @@ card_title: Giovani adulti
 order: 20
 icon: star
 card_excerpt: Accompagnamento nei passaggi tra studio, lavoro e identità, in un'età di scelte importanti.
-title: Psicologo per giovani adulti a Milano | Francesca Pirazzo
+title: Psicologo per giovani adulti a Milano
 description: 'Percorso di sostegno psicologico per giovani adulti a Milano e online, con la Dott.ssa Francesca Pirazzo:
   accompagnamento nei passaggi tra studio, lavoro e identità.'
 h1: Un percorso per giovani adulti

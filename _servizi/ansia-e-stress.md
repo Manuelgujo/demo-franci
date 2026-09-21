@@ -3,7 +3,7 @@ card_title: Ansia e stress
 order: 10
 icon: heart
 card_excerpt: Strumenti concreti e uno spazio di ascolto per chi si sente sopraffatto dai pensieri o dai ritmi quotidiani.
-title: Psicologo per ansia e stress a Milano | Francesca Pirazzo
+title: Psicologo per ansia e stress a Milano
 description: 'Un percorso di supporto psicologico per ansia e stress a Milano e online, con la Dott.ssa Francesca
   Pirazzo: strumenti concreti per riconoscere e gestire pensieri e tensione quotidiana.'
 h1: Un percorso per ansia e stress

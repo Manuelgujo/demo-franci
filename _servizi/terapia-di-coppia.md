@@ -3,7 +3,7 @@ card_title: Terapia di coppia
 order: 40
 icon: users
 card_excerpt: Per coppie che vogliono ritrovare un dialogo autentico o attraversare insieme un momento di crisi.
-title: Terapia di coppia a Milano | Francesca Pirazzo
+title: Terapia di coppia a Milano
 description: Terapia di coppia a Milano e online con la Dott.ssa Francesca Pirazzo, per coppie che vogliono ritrovare
   un dialogo autentico o attraversare insieme un momento di crisi.
 h1: Terapia di coppia a Milano

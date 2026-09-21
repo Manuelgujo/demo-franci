@@ -1,10 +1,11 @@
-title: "Francesca Pirazzo — Psicoterapeuta"
+title: "Dott.ssa Francesca Pirazzo"
+tagline: "Psicoterapeuta a Milano"   # titolo scheda della home: «Dott.ssa Francesca Pirazzo | Psicoterapeuta a Milano»
 description: "Psicoterapeuta specializzata in psicoterapia integrata a Milano. Percorsi individuali, di coppia e per giovani adulti, in studio e online."
 url: "https://manuelgujo.github.io"
 baseurl: "/demo-franci"   # DEMO: rimuovere (baseurl: "") quando si collega il dominio definitivo
 lang: it
 locale: it_IT
-author: "Francesca Pirazzo"
+author: "Dott.ssa Francesca Pirazzo"
 twitter:
   username: francescapirazzo
   card: summary
