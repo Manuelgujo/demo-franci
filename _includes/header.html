@@ -1,8 +1,8 @@
 <header>
   <nav class="nav" aria-label="Navigazione principale">
-    <a href="{{ '/' | relative_url }}" class="brand" aria-label="Francesca Pirazzo, torna alla home">
+    <a href="{{ '/' | relative_url }}" class="brand" aria-label="{{ site.nap.name }}, torna alla home">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21c0-6-4-9-4-13a4 4 0 0 1 8 0c0 4-4 7-4 13Z"/><path d="M8.5 9.5c1.5 1 3.5 1 5 0"/></svg>
-      Francesca Pirazzo
+      {{ site.nap.name }}
     </a>
     <button class="burger" id="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="navlinks">
       <span></span><span></span><span></span>
