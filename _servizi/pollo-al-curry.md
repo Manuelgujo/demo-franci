@@ -18,4 +18,4 @@ faq:
 published: true
 ---
 
-è un pollo al curry senza però essere passato prima con l'amido di mais, rimane cremoso lo stesso
+è un pollo al curry senza però essere passato prima con l'amido di mais, rimane cremoso lo stesso![](https://picsum.photos/id/1080/1920/1280.webp)
