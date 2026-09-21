@@ -1,10 +1,10 @@
 <header>
-  <nav class="nav">
+  <nav class="nav" aria-label="Navigazione principale">
     <a href="{{ '/' | relative_url }}" class="brand" aria-label="Francesca Pirazzo, torna alla home">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21c0-6-4-9-4-13a4 4 0 0 1 8 0c0 4-4 7-4 13Z"/><path d="M8.5 9.5c1.5 1 3.5 1 5 0"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21c0-6-4-9-4-13a4 4 0 0 1 8 0c0 4-4 7-4 13Z"/><path d="M8.5 9.5c1.5 1 3.5 1 5 0"/></svg>
       Francesca Pirazzo
     </a>
-    <button class="burger" id="burger" aria-label="Apri il menu" aria-expanded="false">
+    <button class="burger" id="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="navlinks">
       <span></span><span></span><span></span>
     </button>
     <ul class="navlinks" id="navlinks">
@@ -13,7 +13,12 @@
       <li><a href="{{ '/#come-funziona' | relative_url }}">Come funziona</a></li>
       <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
       <li><a href="{{ '/#contatti' | relative_url }}">Contatti</a></li>
-      <li><a href="{{ '/#prenotazione' | relative_url }}" class="nav-cta">Prenota</a></li>
+      <li class="nav-cta-item"><a href="{{ '/#prenotazione' | relative_url }}" class="nav-cta">Prenota<span class="nav-cta-long"> un primo colloquio</span></a></li>
+      <li class="nav-contact">
+        <span class="nav-contact-label">Preferisci scrivere o chiamare?</span>
+        <a href="tel:{{ site.nap.phone_link }}">{{ site.nap.phone }}</a>
+        <a href="mailto:{{ site.nap.email }}">{{ site.nap.email }}</a>
+      </li>
     </ul>
   </nav>
 </header>
