@@ -1,6 +1,6 @@
 title: "Dott.ssa Francesca Pirazzo"
-tagline: "Psicoterapeuta a Milano"   # titolo scheda della home: «Dott.ssa Francesca Pirazzo | Psicoterapeuta a Milano»
-description: "Psicoterapeuta specializzata in psicoterapia integrata a Milano. Percorsi individuali, di coppia e per giovani adulti, in studio e online."
+tagline: "Psicoterapeuta a Padova"   # titolo scheda della home: «Dott.ssa Francesca Pirazzo | Psicoterapeuta a Padova»
+description: "Psicoterapeuta specializzata in psicoterapia integrata a Padova. Percorsi individuali, di coppia e per giovani adulti, in studio e online."
 url: "https://manuelgujo.github.io"
 baseurl: "/demo-franci"   # DEMO: rimuovere (baseurl: "") quando si collega il dominio definitivo
 lang: it
@@ -18,9 +18,9 @@ twitter:
 nap:
   name: "Dott.ssa Francesca Pirazzo"
   street: "Via degli Ontani 12"
-  postal_code: "20100"
-  city: "Milano"
-  province: "MI"
+  postal_code: "35100"
+  city: "Padova"
+  province: "PD"
   country: "IT"
   phone: "+39 000 000 0000"
   phone_link: "+390000000000"

@@ -3,10 +3,10 @@ card_title: Percorso individuale
 order: 30
 icon: user
 card_excerpt: Per chi attraversa un momento di cambiamento, difficoltà o semplicemente desidera conoscersi meglio.
-title: Psicoterapia individuale a Milano
-description: Percorsi di psicoterapia individuale a Milano e online con la Dott.ssa Francesca Pirazzo, per adulti
+title: Psicoterapia individuale a Padova
+description: Percorsi di psicoterapia individuale a Padova e online con la Dott.ssa Francesca Pirazzo, per adulti
   che attraversano un cambiamento, una difficoltà o desiderano conoscersi meglio.
-h1: Psicoterapia individuale a Milano
+h1: Psicoterapia individuale a Padova
 lede: Uno spazio dedicato a te, per capire cosa ti sta succedendo e trovare, con calma, la tua direzione.
 per_chi:
 - Momenti di cambiamento (lavorativo, relazionale, di vita)
@@ -25,4 +25,4 @@ La psicoterapia individuale è un percorso pensato per chi sente il bisogno di f
 
 Lavoro con un approccio di **psicoterapia integrata**: non applico un unico schema fisso, ma costruisco insieme a te un percorso su misura, che tenga conto della tua storia, delle tue risorse e del momento specifico che stai attraversando.
 
-Gli incontri si svolgono con cadenza settimanale o quindicinale, in studio a Milano o online, e la loro durata varia da persona a persona: alcuni percorsi sono più brevi e mirati, altri accompagnano un cambiamento più profondo nel tempo.
+Gli incontri si svolgono con cadenza settimanale o quindicinale, in studio a Padova o online, e la loro durata varia da persona a persona: alcuni percorsi sono più brevi e mirati, altri accompagnano un cambiamento più profondo nel tempo.

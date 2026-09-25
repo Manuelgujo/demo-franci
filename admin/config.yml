@@ -108,7 +108,7 @@ collections:
       - label: "Titolo per Google (SEO)"
         name: "title"
         widget: "string"
-        hint: "Il titolo che appare nella scheda del browser e nei risultati di ricerca. Meglio se contiene il servizio e la città (max ~40 caratteri). Il nome «Dott.ssa Francesca Pirazzo» viene aggiunto in automatico in fondo: non scriverlo. Es. «Psicologo per ansia e stress a Milano»."
+        hint: "Il titolo che appare nella scheda del browser e nei risultati di ricerca. Meglio se contiene il servizio e la città (max ~40 caratteri). Il nome «Dott.ssa Francesca Pirazzo» viene aggiunto in automatico in fondo: non scriverlo. Es. «Psicologo per ansia e stress a Padova»."
       - label: "Descrizione per Google (SEO)"
         name: "description"
         widget: "text"

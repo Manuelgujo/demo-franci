@@ -58,7 +58,7 @@ layout: default
   "name": {{ page.h1 | default: page.title | jsonify }},
   "description": {{ page.description | jsonify }},
   "serviceType": "Psicoterapia",
-  "areaServed": "Milano",
+  "areaServed": {{ site.nap.city | jsonify }},
   "url": {{ page.url | absolute_url | jsonify }},
   "provider": {
     "@type": "Psychologist",

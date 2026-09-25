@@ -1,33 +1,42 @@
 ---
 layout: default
-description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia integrata. Percorsi individuali, di coppia e per giovani adulti a Milano e online. Prenota un primo colloquio."
-structured_data:
-  "@context": "https://schema.org"
-  "@type": "Psychologist"
-  "name": "Dott.ssa Francesca Pirazzo"
-  "url": "https://www.francescapirazzo.it/"
-  "description": "Psicoterapeuta specializzata in psicoterapia integrata. Percorsi individuali, di coppia e per giovani adulti, a Milano e online."
-  "areaServed": "Milano"
-  "telephone": "+39 000 000 0000"
-  "email": "info@francescapirazzo.it"
-  "address":
-    "@type": "PostalAddress"
-    "streetAddress": "Via degli Ontani 12"
-    "postalCode": "20100"
-    "addressLocality": "Milano"
-    "addressRegion": "MI"
-    "addressCountry": "IT"
-  "alumniOf":
-    "@type": "EducationalOrganization"
-    "name": "Scuola di Psicoterapia Integrata"
+description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia integrata. Percorsi individuali, di coppia e per giovani adulti a Padova e online. Prenota un primo colloquio."
 ---
+
+<!-- Dati strutturati Psychologist: generati da site.nap invece di essere
+     scritti a mano qui, cosi' restano sempre allineati a footer/contatti/
+     privacy policy (un solo punto da aggiornare, come da progetto). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Psychologist",
+  "name": {{ site.nap.name | jsonify }},
+  "url": {{ '/' | absolute_url | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "areaServed": {{ site.nap.city | jsonify }},
+  "telephone": {{ site.nap.phone | jsonify }},
+  "email": {{ site.nap.email | jsonify }},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ site.nap.street | jsonify }},
+    "postalCode": {{ site.nap.postal_code | jsonify }},
+    "addressLocality": {{ site.nap.city | jsonify }},
+    "addressRegion": {{ site.nap.province | jsonify }},
+    "addressCountry": {{ site.nap.country | jsonify }}
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": {{ site.nap.school | jsonify }}
+  }
+}
+</script>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
       <h1>Uno spazio per capirsi,<br>senza fretta.</h1>
-      <p class="lede measure">Sono la Dott.ssa Francesca Pirazzo, psicoterapeuta. Accompagno adulti, coppie e giovani adulti in percorsi di psicoterapia integrata, a Milano e online — con l'idea che ogni persona porti con sé un modo unico di stare al mondo, da ascoltare prima ancora che da correggere.</p>
+      <p class="lede measure">Sono la Dott.ssa Francesca Pirazzo, psicoterapeuta. Accompagno adulti, coppie e giovani adulti in percorsi di psicoterapia integrata, a Padova e online — con l'idea che ogni persona porti con sé un modo unico di stare al mondo, da ascoltare prima ancora che da correggere.</p>
       <div class="hero-actions">
         <a href="#prenotazione" class="btn-primary">Prenota un primo colloquio</a>
         <a href="#chi-sono" class="btn-ghost">Scopri il mio percorso</a>
@@ -152,7 +161,7 @@ structured_data:
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l6 6L20 6"/></svg> Laurea in Psicologia Clinica</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l6 6L20 6"/></svg> Specializzazione in Psicoterapia Integrata — Scuola di Psicoterapia Integrata</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l6 6L20 6"/></svg> Iscritta all'Albo degli Psicologi</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l6 6L20 6"/></svg> Percorsi in studio a Milano e online</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l6 6L20 6"/></svg> Percorsi in studio a Padova e online</li>
       </ul>
     </div>
   </div>
@@ -242,7 +251,7 @@ structured_data:
       <div class="faq-wrap">
         <details class="faq-item">
           <summary>Le sedute si svolgono solo in studio?<span class="plus">+</span></summary>
-          <p>No: propongo incontri sia in studio, a Milano, sia online, per chi preferisce seguire il percorso da casa o vive lontano.</p>
+          <p>No: propongo incontri sia in studio, a Padova, sia online, per chi preferisce seguire il percorso da casa o vive lontano.</p>
         </details>
         <details class="faq-item">
           <summary>Quanto dura un percorso di psicoterapia?<span class="plus">+</span></summary>

@@ -4,6 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Content-Security-Policy: limita gli script/stili caricabili ai soli
+     domini che il sito usa davvero (se stesso + Google Fonts). Riduce il
+     rischio di injection se in futuro venisse compromesso un componente
+     esterno. Non copre /admin (Sveltia CMS ha bisogno di connettersi
+     liberamente a GitHub e a unpkg.com per funzionare).
+     Limite noto: GitHub Pages non supporta header HTTP personalizzati,
+     quindi qui manca X-Frame-Options/frame-ancestors (il tag <meta> non
+     può impostarlo) e HSTS va servito dalla piattaforma stessa.
+     Se in futuro il form di prenotazione viene collegato a un servizio
+     esterno (Formspree, Resend, ecc.), aggiungere il suo dominio a
+     connect-src e/o form-action qui sotto, altrimenti l'invio verrà
+     bloccato silenziosamente dal browser. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+
 <!-- jekyll-seo-tag genera automaticamente: title, meta description,
      canonical, Open Graph, Twitter Card — l'equivalente di Yoast,
      leggendo title/description dal front matter di ogni pagina. -->
