@@ -4,3 +4,7 @@ _site/
 .jekyll-metadata
 vendor/
 .bundle/
+
+# Residui di Windows (download da internet)
+*:Zone.Identifier
+*.Zone.Identifier

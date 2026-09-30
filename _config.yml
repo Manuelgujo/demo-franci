@@ -4,6 +4,8 @@ description: "Psicoterapeuta specializzata in psicoterapia integrata a Padova. P
 url: "https://manuelgujo.github.io"
 baseurl: "/demo-franci"   # DEMO: rimuovere (baseurl: "") quando si collega il dominio definitivo
 lang: it
+# Immagine di anteprima per Google/social (Open Graph e Twitter Card, via jekyll-seo-tag)
+image: /assets/img/og-image.png
 locale: it_IT
 author: "Dott.ssa Francesca Pirazzo"
 twitter:
@@ -28,6 +30,10 @@ nap:
   piva: "00000000000"
   albo: "Iscrizione Albo degli Psicologi n. 00000"
   school: "Scuola di Psicoterapia Integrata"
+  # Profili social reali (quando pronti): finiscono nei dati strutturati (sameAs).
+  # same_as:
+  #   - "https://www.instagram.com/..."
+  #   - "https://www.linkedin.com/in/..."
 
 plugins:
   - jekyll-seo-tag

@@ -5,7 +5,8 @@ layout: default
   <div class="wrap" style="max-width:70ch;">
     <a href="{{ '/blog/' | relative_url }}" class="back-link">&larr; Torna al blog</a>
     <article>
-      {% assign cats = page.categories | default: page.category | split: ',' %}
+      {% assign raw = page.categories | default: page.category %}
+      {% assign cats = raw | join: ',' | split: ',' %}
       {% for cat in cats %}
         <span class="tag">{{ cat | strip }}</span>
       {% endfor %}

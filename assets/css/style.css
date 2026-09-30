@@ -1,3 +1,18 @@
+/* ============ Font ospitati sul sito (nessuna chiamata a Google) ============
+   Fraunces (titoli, asse opsz + wght) e Karla (testo, asse wght): font variabili
+   con licenza SIL OFL, sottoinsieme latino (copre l'italiano). Fonte: pacchetti
+   @fontsource-variable/fraunces e @fontsource-variable/karla. */
+@font-face{
+  font-family:'Fraunces';font-style:normal;font-weight:100 900;font-display:swap;
+  src:url('../fonts/fraunces-latin.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face{
+  font-family:'Karla';font-style:normal;font-weight:200 800;font-display:swap;
+  src:url('../fonts/karla-latin.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
 /* ============ Design tokens ============ */
   :root{
     --paper: #FAF3EC;
@@ -230,20 +245,24 @@
     text-decoration:none;color:var(--ink);padding:15px 6px;font-weight:600;
     border-bottom:1.5px solid var(--rose);display:inline-block;
   }
-  .hero-art{position:relative;}
-  .hero-art svg{width:100%;height:auto;}
-  .hero-draw path{
-    stroke-dasharray:900; stroke-dashoffset:900;
+  .hero-art{position:relative;max-width:420px;margin-inline:auto;}
+  .hero-art svg{width:100%;height:auto;display:block;}
+  /* Animazione al caricamento: i tratti (verde e inchiostro) si "disegnano"
+     con lo stesso keyframe di prima (stroke-dashoffset, 2.1s); i colori pieni
+     (petali rossi e centro) sfumano subito dopo. pathLength="1" sui path
+     rende il dash indipendente dalla lunghezza reale di ogni tratto. */
+  .hero-draw .hp-green path,
+  .hero-draw .hp-ink path{
+    stroke-dasharray:1 2; stroke-dashoffset:1;
     animation:draw 2.1s ease forwards;
   }
   @keyframes draw{to{stroke-dashoffset:0;}}
-  /* Papaveri: steli in verde salvia, petali rossi (riempiti col colore di sfondo,
-     così i petali davanti coprono quelli dietro), centro in colore testo. */
-  .hero-draw .stem{stroke:var(--sage-dark);stroke-width:2.4;}
-  .hero-draw .stem.thin{stroke-width:2;}
-  .hero-draw .petal{stroke:var(--poppy);stroke-width:2.4;fill:var(--paper);}
-  .hero-draw .fold{stroke:var(--poppy);stroke-width:1.5;}
-  .hero-draw .core{stroke:var(--ink);stroke-width:1.8;}
+  @keyframes fadein{to{opacity:1;}}
+  .hero-draw .hp-green path{stroke:var(--sage-dark);stroke-width:3.8;}
+  .hero-draw .hp-ink path{stroke:var(--ink);stroke-width:3.6;}
+  .hero-draw .hp-fill path{fill:#DE3C28;stroke:none;}
+  .hero-draw .hp-core path{fill:#2B2130;stroke:none;}
+  .hero-draw .hp-fill, .hero-draw .hp-core{opacity:0;animation:fadein 1s ease 1s forwards;}
 
   /* Sotto gli 860px la hero è a una colonna: il disegno diventa una filigrana
      nell'angolo in alto a destra, dietro al testo, senza allungare la pagina. */
@@ -254,13 +273,13 @@
     .hero-art{
       position:absolute;z-index:0;
       top:clamp(20px, 8vw, 64px);right:2.5vw;
-      width:clamp(170px, 52vw, 300px);max-width:none;margin:0;
+      width:clamp(150px, 46vw, 260px);max-width:none;margin:0;
       opacity:.52;pointer-events:none;
     }
   }
   /* Tablet: il titolo è breve, quindi i fiori stanno in alto accanto ad esso */
   @media (min-width:600px) and (max-width:860px){
-    .hero-art{top:-14px;right:3vw;width:240px;}
+    .hero-art{top:-14px;right:3vw;width:210px;}
   }
 
   /* ============ Section headings ============ */
@@ -374,6 +393,13 @@
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
   @media (max-width:520px){ .row2{grid-template-columns:1fr;} }
   .form-note{font-size:.85rem;color:var(--ink-soft);margin-top:6px;}
+  .field-hint{font-size:.85rem;color:var(--ink-soft);margin:6px 0 0;}
+  .consent{margin-bottom:22px;}
+  .consent label.check{display:flex;gap:12px;align-items:flex-start;font-size:.92rem;font-weight:500;cursor:pointer;line-height:1.45;}
+  .consent input[type=checkbox]{flex:none;width:20px;height:20px;margin-top:2px;accent-color:var(--sage-dark);}
+  .consent a{color:inherit;text-decoration:underline;}
+  /* Campo trappola anti-spam: fuori schermo, invisibile a persone e screen reader */
+  .hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
   #booking-success{
     background:var(--sand);border-radius:20px;padding:28px;display:none;
   }

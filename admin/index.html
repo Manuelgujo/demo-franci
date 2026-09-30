@@ -8,6 +8,14 @@
 </head>
 <body>
   <!-- Sveltia CMS: interfaccia di editing per il blog, senza bisogno di WordPress. -->
-  <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js" type="module"></script>
+  <!-- Versione FISSATA (0.224.0) + hash SRI: il browser rifiuta il file se non e'
+       identico a quello verificato. Per aggiornare: cambiare versione qui e
+       ricalcolare l'hash con
+         curl -s https://unpkg.com/@sveltia/cms@NUOVA/dist/sveltia-cms.js | openssl dgst -sha384 -binary | openssl base64 -A
+       poi provare /admin. (SRI copre solo questo file, non i moduli che il CMS
+       carica a runtime, es. chunks/react-dom.js.) -->
+  <script src="https://unpkg.com/@sveltia/cms@0.224.0/dist/sveltia-cms.js"
+          integrity="sha384-aLT0yrOgI0tqISfW+PyGAfyYEan7cfRlFVPUOqYTVw0KYNZICvRV00AZF1NiozWa"
+          crossorigin="anonymous" type="module"></script>
 </body>
 </html>

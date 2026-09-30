@@ -4,19 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Content-Security-Policy: limita gli script/stili caricabili ai soli
-     domini che il sito usa davvero (se stesso + Google Fonts). Riduce il
-     rischio di injection se in futuro venisse compromesso un componente
-     esterno. Non copre /admin (Sveltia CMS ha bisogno di connettersi
-     liberamente a GitHub e a unpkg.com per funzionare).
+<!-- Content-Security-Policy: limita script, stili e font ai soli file del
+     sito stesso. Nessuna risorsa esterna (font inclusi, ospitati in
+     /assets/fonts) e nessuno script inline: script-src 'self' senza
+     'unsafe-inline'. I dati strutturati JSON-LD non sono eseguibili e non
+     rientrano in script-src. style-src mantiene 'unsafe-inline' perche' il
+     sito usa attributi style="..." nei template. Non copre /admin (Sveltia
+     CMS ha bisogno di connettersi liberamente a GitHub e a unpkg.com).
      Limite noto: GitHub Pages non supporta header HTTP personalizzati,
      quindi qui manca X-Frame-Options/frame-ancestors (il tag <meta> non
-     può impostarlo) e HSTS va servito dalla piattaforma stessa.
+     puo' impostarlo) e HSTS va servito dalla piattaforma stessa.
      Se in futuro il form di prenotazione viene collegato a un servizio
-     esterno (Formspree, Resend, ecc.), aggiungere il suo dominio a
-     connect-src e/o form-action qui sotto, altrimenti l'invio verrà
+     esterno (Web3forms, Formspree, ecc.), aggiungere il suo dominio a
+     connect-src e/o form-action qui sotto, altrimenti l'invio verra'
      bloccato silenziosamente dal browser. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
 
 <!-- jekyll-seo-tag genera automaticamente: title, meta description,
      canonical, Open Graph, Twitter Card — l'equivalente di Yoast,
@@ -29,11 +31,12 @@
 </script>
 {% endif %}
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#127807;</text></svg>">
+<link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="{{ '/assets/fonts/fraunces-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/karla-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 </head>
@@ -43,27 +46,6 @@
 {{ content }}
 </main>
 {% include footer.html %}
-<script>
-  const burger = document.getElementById('burger');
-  const navlinks = document.getElementById('navlinks');
-  if (burger && navlinks) {
-    const root = document.documentElement;
-    const setMenu = (open) => {
-      navlinks.classList.toggle('open', open);
-      root.classList.toggle('menu-open', open);
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      burger.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
-    };
-    burger.addEventListener('click', () => setMenu(!navlinks.classList.contains('open')));
-    navlinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && navlinks.classList.contains('open')) { setMenu(false); burger.focus(); }
-    });
-    window.matchMedia('(min-width: 861px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
-  }
-  const y = document.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
-</script>
-{% if page.extra_js %}{{ page.extra_js }}{% endif %}
+<script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
 </body>
 </html>
