@@ -287,7 +287,7 @@
   .sec-head h2{font-size:clamp(1.7rem,3vw,2.35rem);}
   .sec-head p{color:var(--ink-soft);font-size:1.05rem;}
 
-  .band{background:var(--paper-soft);}
+  .band{background:color-mix(in srgb, var(--paper-soft) 55%, transparent);} /* semitrasparente: lascia intravedere le radici dietro */
 
   /* ============ Chi sono ============ */
   .chisono-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start;}
@@ -420,7 +420,7 @@
   .map-illo svg{width:44%;color:var(--sage-dark);}
 
   /* ============ Footer ============ */
-  footer{border-top:1px solid var(--line);padding:48px 0 32px;background:var(--paper-soft);}
+  footer{border-top:1px solid var(--line);padding:48px 0 32px;background:color-mix(in srgb, var(--paper-soft) 55%, transparent);}
   .footer-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;align-items:center;}
   .footer-links{display:flex;gap:24px;list-style:none;padding:0;margin:0;flex-wrap:wrap;}
   .footer-links a{text-decoration:none;color:var(--ink-soft);font-size:.92rem;}
@@ -470,3 +470,18 @@
   /* Pagina servizio: testo + "Per chi è pensato" (due colonne solo da tablet in su) */
   .service-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start;}
   @media (max-width:860px){ .service-grid{grid-template-columns:1fr;gap:28px;} }
+
+
+/* ============ Radici in background (assets/js/roots.js) ============ */
+.roots{position:absolute;top:0;left:0;width:100%;height:0;z-index:-1;pointer-events:none;overflow:hidden;}
+.roots svg{display:block;max-width:none;}
+.roots path{stroke:var(--rose);stroke-linecap:round;stroke-linejoin:round;fill:none;}
+.roots .r-main{stroke-width:2.8;opacity:.62;}
+.roots .r-br{stroke-width:2.1;opacity:.56;}
+.roots .r-tw{stroke-width:1.6;opacity:.52;}
+.roots .r-tw.sage{stroke:var(--sage-dark);}
+.roots circle{fill:var(--poppy,#DE3C28);opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.3);transition:opacity .5s ease,transform .5s ease;}
+.roots circle.on{opacity:.6;transform:scale(1);}
+@media (max-width:640px){ .roots path{opacity:.4 !important;} }
+@media (prefers-reduced-motion: reduce){ .roots{display:none;} }
+@media print{ .roots{display:none;} }
