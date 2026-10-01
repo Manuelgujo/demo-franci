@@ -472,16 +472,15 @@
   @media (max-width:860px){ .service-grid{grid-template-columns:1fr;gap:28px;} }
 
 
-/* ============ Radici in background (assets/js/roots.js) ============ */
+/* ============ Radici in background (assets/js/roots.js) ============
+   Continuano gli steli del papavero nell'hero: stesso verde salvia, stesso
+   tratto arrotondato, leaf a contorno e viticci a spirale. */
 .roots{position:absolute;top:0;left:0;width:100%;height:0;z-index:-1;pointer-events:none;overflow:hidden;}
 .roots svg{display:block;max-width:none;}
-.roots path{stroke:var(--rose);stroke-linecap:round;stroke-linejoin:round;fill:none;}
-.roots .r-main{stroke-width:2.8;opacity:.62;}
-.roots .r-br{stroke-width:2.1;opacity:.56;}
-.roots .r-tw{stroke-width:1.6;opacity:.52;}
-.roots .r-tw.sage{stroke:var(--sage-dark);}
-.roots circle{fill:var(--poppy,#DE3C28);opacity:0;transform-box:fill-box;transform-origin:center;transform:scale(.3);transition:opacity .5s ease,transform .5s ease;}
-.roots circle.on{opacity:.6;transform:scale(1);}
-@media (max-width:640px){ .roots path{opacity:.4 !important;} }
+.roots path{stroke:var(--sage-dark);stroke-linecap:round;stroke-linejoin:round;fill:none;}
+.roots .r-main{stroke-width:2.4;opacity:.8;}
+.roots .r-br{stroke-width:1.9;opacity:.75;}
+.roots .r-lf{stroke-width:1.7;opacity:.75;}
+@media (max-width:640px){ .roots path{opacity:.5 !important;} }
 @media (prefers-reduced-motion: reduce){ .roots{display:none;} }
 @media print{ .roots{display:none;} }
