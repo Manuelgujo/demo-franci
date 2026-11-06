@@ -346,6 +346,8 @@
   .credentials{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:14px;}
   .credentials li{display:flex;gap:12px;font-size:.97rem;color:var(--ink-soft);align-items:flex-start;}
   .credentials li.sub{padding-left:32px;}
+  .credentials li.sub svg{display:none;}
+  .credentials li.sub::before{content:"\25C6";flex:none;width:20px;margin-top:5px;font-size:.6rem;line-height:1;color:var(--rose);}
   .credentials svg{flex:none;width:20px;height:20px;margin-top:2px;color:var(--sage-dark);}
 
   /* ============ Servizi ============ */
