@@ -280,45 +280,41 @@
   .hero-draw .hp-green{opacity:.42;}
 
   /* Smartphone e tablet (sotto 860px).
-     Riga in alto: nome a sinistra, papaveri a destra. Il disegno è ritagliato
-     appena sotto le teste e sfumato verso il basso: lo stelo e le radici non
-     arrivano mai sotto al testo, quindi non si confondono con la citazione.
-     Sotto, a tutta larghezza: citazione, introduzione e pulsanti (grandi,
-     raggiungibili con il pollice). */
+     Nome a sinistra, papaveri a destra; i gambi scendono fino alla citazione
+     (sfumati solo in fondo). Subito sotto c'è il pulsante di prenotazione. */
   @media (max-width:860px){
-    .hero{padding:28px 0 52px;}
-    .hero-grid{
-      display:grid;grid-template-columns:minmax(0,1fr) minmax(0,46%);
-      column-gap:8px;row-gap:0;align-items:center;
-    }
+    .hero{padding:18px 0 40px;}
+    .hero .wrap{position:relative;}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1fr);row-gap:0;}
     .hero-grid > div:first-child{display:contents;}
-    .hero-grid > div:first-child > :not(.hero-name){grid-column:1 / -1;}
+    .hero-grid > div:first-child > *{grid-column:1;position:relative;z-index:1;}
 
     .hero .hero-name{
-      grid-column:1;grid-row:1;margin:0;
-      font-size:clamp(1.55rem, 7vw, 2rem);line-height:1.12;font-weight:500;
+      grid-row:1;max-width:56%;margin:0;
+      font-size:clamp(1.4rem, 6.4vw, 1.75rem);line-height:1.12;
     }
     .hero .hero-name .hero-role{margin-top:8px;font-size:.62rem;line-height:1.35;letter-spacing:.03em;}
 
     .hero-art{
-      grid-column:2;grid-row:1;justify-self:end;
-      width:100%;max-width:250px;margin:0;opacity:1;
-      aspect-ratio:700 / 540;overflow:hidden;
+      position:absolute;z-index:0;top:0;right:-6px;
+      width:min(200px, 54vw);max-width:none;margin:0;opacity:1;
       -webkit-mask-image:linear-gradient(to bottom,#000 84%,transparent 100%);
               mask-image:linear-gradient(to bottom,#000 84%,transparent 100%);
     }
 
-    .hero-quote{text-align:center;margin:16px 0 12px;padding-top:16px;border-top:1px solid var(--line);}
+    .hero-actions{order:1;flex-direction:column;align-items:stretch;margin:18px 0 0;gap:6px;}
+    .hero-actions .btn-primary{text-align:center;padding:17px 28px;}
+    .hero-actions .btn-ghost{text-align:center;border-bottom:none;padding:10px 6px;color:var(--sage-dark);}
+
+    .hero-quote{order:2;text-align:center;margin:22px 0 14px;padding-top:16px;border-top:1px solid var(--line);}
     .hero-quote blockquote{margin:0 auto;}
     .hero-quote p{margin:0 auto;max-width:24ch;}
+
     .hero .hero-intro{
-      max-width:none;font-size:.8rem;line-height:1.4;color:var(--ink-soft);
+      order:3;max-width:none;font-size:.8rem;line-height:1.4;color:var(--ink-soft);
       text-align:justify;hyphens:auto;-webkit-hyphens:auto;
       padding-left:12px;border-left:2px solid var(--rose-soft);
     }
-    .hero-actions{flex-direction:column;align-items:stretch;margin-top:26px;gap:6px;}
-    .hero-actions .btn-primary{text-align:center;padding:17px 28px;}
-    .hero-actions .btn-ghost{text-align:center;border-bottom:none;padding:12px 6px;color:var(--sage-dark);}
   }
 
   /* ============ Section headings ============ */

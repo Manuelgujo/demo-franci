@@ -95,6 +95,21 @@
     return { outline: outline, vein: vein };
   }
 
+  /* Rettangoli dei blocchi di testo, in coordinate di documento. */
+  function textBoxes() {
+    const sel = 'h1,h2,h3,p,li,summary,blockquote,figcaption,label,.servizio,.post-card,.step,.faq-item,.contact-list';
+    const out = [];
+    const nodes = document.querySelectorAll(sel);
+    for (let i = 0; i < nodes.length; i++) {
+      const el = nodes[i];
+      if (el.closest('header') || el.closest('footer')) continue;
+      const r = el.getBoundingClientRect();
+      if (r.width < 2 || r.height < 2) continue;
+      out.push([r.left + window.scrollX - 6, r.top + window.scrollY - 4, r.width + 12, r.height + 8]);
+    }
+    return out;
+  }
+
   function build() {
     layer.style.height = '0px';
     W = document.documentElement.clientWidth;
@@ -129,10 +144,27 @@
       '<stop offset="0" stop-color="#000"/><stop offset="1" stop-color="#fff"/></linearGradient>' +
       '<mask id="rootmask" maskUnits="userSpaceOnUse" x="0" y="0" width="' + W + '" height="' + docH + '">' +
       '<rect x="0" y="0" width="' + W + '" height="' + docH + '" fill="url(#rootfade)"/></mask>';
+    // Maschera del testo: sopra ai blocchi di testo le radici si affievoliscono
+    // quasi del tutto (bordi sfumati con un leggero sfocato).
+    const boxes = textBoxes();
+    let holes = '';
+    for (let i = 0; i < boxes.length; i++) {
+      const b = boxes[i];
+      holes += '<rect x="' + b[0].toFixed(0) + '" y="' + b[1].toFixed(0) + '" width="' + b[2].toFixed(0) +
+               '" height="' + b[3].toFixed(0) + '" rx="6"/>';
+    }
+    defs.innerHTML +=
+      '<filter id="textsoft" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="6"/></filter>' +
+      '<mask id="textmask" maskUnits="userSpaceOnUse" x="0" y="0" width="' + W + '" height="' + docH + '">' +
+      '<rect x="0" y="0" width="' + W + '" height="' + docH + '" fill="#fff"/>' +
+      '<g filter="url(#textsoft)" fill="#1c1c1c">' + holes + '</g></mask>';
     svg.appendChild(defs);
+    const outer = document.createElementNS(ns, 'g');
+    outer.setAttribute('mask', 'url(#rootmask)');
     const g = document.createElementNS(ns, 'g');
-    g.setAttribute('mask', 'url(#rootmask)');
-    svg.appendChild(g);
+    g.setAttribute('mask', 'url(#textmask)');
+    outer.appendChild(g);
+    svg.appendChild(outer);
     layerG = g;
 
     const rand = rng(20240611);
