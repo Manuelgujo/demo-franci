@@ -298,7 +298,7 @@
       grid-column:1;grid-row:1;margin:0;
       font-size:clamp(1.55rem, 7vw, 2rem);line-height:1.12;font-weight:500;
     }
-    .hero .hero-name .hero-role{margin-top:10px;font-size:.5em;letter-spacing:.04em;}
+    .hero .hero-name .hero-role{margin-top:8px;font-size:.62rem;line-height:1.35;letter-spacing:.03em;}
 
     .hero-art{
       grid-column:2;grid-row:1;justify-self:end;
@@ -311,7 +311,7 @@
     .hero-quote{text-align:center;margin:22px 0 22px;padding-top:22px;border-top:1px solid var(--line);}
     .hero-quote blockquote{margin:0 auto;}
     .hero-quote p{margin:0 auto;max-width:24ch;}
-    .hero .hero-intro{max-width:none;font-size:1rem;line-height:1.7;}
+    .hero .hero-intro{max-width:none;font-size:.9rem;line-height:1.65;}
     .hero-actions{flex-direction:column;align-items:stretch;margin-top:26px;gap:6px;}
     .hero-actions .btn-primary{text-align:center;padding:17px 28px;}
     .hero-actions .btn-ghost{text-align:center;border-bottom:none;padding:12px 6px;color:var(--sage-dark);}
