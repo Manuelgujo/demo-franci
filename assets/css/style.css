@@ -319,7 +319,8 @@
 
     .hero .hero-intro{
       order:2;max-width:none;font-size:.8rem;line-height:1.4;color:var(--ink-soft);
-      text-align:justify;hyphens:auto;-webkit-hyphens:auto;
+      text-align:left;hyphens:manual;-webkit-hyphens:manual;word-spacing:normal;
+      overflow-wrap:normal;word-break:normal;
       padding-left:12px;border-left:2px solid var(--rose-soft);
     }
   }
