@@ -279,26 +279,42 @@
   /* Gambo e ramificazioni più trasparenti: nel tema chiaro non si confondono col testo */
   .hero-draw .hp-green{opacity:.42;}
 
-  /* Smartphone (sotto 860px): nome a sinistra e papaveri a destra nella stessa riga,
-     poi citazione, introduzione e pulsanti a tutta larghezza. */
+  /* Smartphone e tablet (sotto 860px).
+     Riga in alto: nome a sinistra, papaveri a destra. Il disegno è ritagliato
+     appena sotto le teste e sfumato verso il basso: lo stelo e le radici non
+     arrivano mai sotto al testo, quindi non si confondono con la citazione.
+     Sotto, a tutta larghezza: citazione, introduzione e pulsanti (grandi,
+     raggiungibili con il pollice). */
   @media (max-width:860px){
-    .hero{padding:32px 0 56px;}
+    .hero{padding:28px 0 52px;}
     .hero-grid{
-      display:grid;grid-template-columns:minmax(0,1fr) minmax(0,42%);
-      column-gap:14px;row-gap:0;align-items:start;
+      display:grid;grid-template-columns:minmax(0,1fr) minmax(0,46%);
+      column-gap:8px;row-gap:0;align-items:center;
     }
     .hero-grid > div:first-child{display:contents;}
-    .hero .hero-name{grid-column:1;grid-row:1;align-self:center;margin:0;font-size:1.3rem;}
-    .hero .hero-name .hero-role{font-size:.8em;}
-    .hero-art{grid-column:2;grid-row:1;width:100%;max-width:none;margin:0;opacity:1;}
     .hero-grid > div:first-child > :not(.hero-name){grid-column:1 / -1;}
-    .hero-quote{text-align:center;margin:28px 0 24px;}
+
+    .hero .hero-name{
+      grid-column:1;grid-row:1;margin:0;
+      font-size:clamp(1.55rem, 7vw, 2rem);line-height:1.12;font-weight:500;
+    }
+    .hero .hero-name .hero-role{margin-top:10px;font-size:.5em;letter-spacing:.04em;}
+
+    .hero-art{
+      grid-column:2;grid-row:1;justify-self:end;
+      width:100%;max-width:250px;margin:0;opacity:1;
+      aspect-ratio:700 / 640;overflow:hidden;
+      -webkit-mask-image:linear-gradient(to bottom,#000 74%,transparent 100%);
+              mask-image:linear-gradient(to bottom,#000 74%,transparent 100%);
+    }
+
+    .hero-quote{text-align:center;margin:22px 0 22px;padding-top:22px;border-top:1px solid var(--line);}
     .hero-quote blockquote{margin:0 auto;}
-    .hero-quote p{margin:0 auto;}
-    .hero .hero-intro{max-width:none;font-size:1rem;}
-    .hero-actions{flex-direction:column;align-items:stretch;margin-top:24px;gap:12px;}
-    .hero-actions .btn-primary{text-align:center;}
-    .hero-actions .btn-ghost{text-align:center;border-bottom:none;}
+    .hero-quote p{margin:0 auto;max-width:24ch;}
+    .hero .hero-intro{max-width:none;font-size:1rem;line-height:1.7;}
+    .hero-actions{flex-direction:column;align-items:stretch;margin-top:26px;gap:6px;}
+    .hero-actions .btn-primary{text-align:center;padding:17px 28px;}
+    .hero-actions .btn-ghost{text-align:center;border-bottom:none;padding:12px 6px;color:var(--sage-dark);}
   }
 
   /* ============ Section headings ============ */
