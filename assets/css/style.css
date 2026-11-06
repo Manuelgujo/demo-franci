@@ -311,7 +311,11 @@
     .hero-quote{text-align:center;margin:22px 0 22px;padding-top:22px;border-top:1px solid var(--line);}
     .hero-quote blockquote{margin:0 auto;}
     .hero-quote p{margin:0 auto;max-width:24ch;}
-    .hero .hero-intro{max-width:none;font-size:.9rem;line-height:1.65;}
+    .hero .hero-intro{
+      max-width:none;font-size:.8rem;line-height:1.6;color:var(--ink-soft);
+      text-align:justify;hyphens:auto;-webkit-hyphens:auto;lang:it;
+      padding-left:12px;border-left:2px solid var(--rose-soft);
+    }
     .hero-actions{flex-direction:column;align-items:stretch;margin-top:26px;gap:6px;}
     .hero-actions .btn-primary{text-align:center;padding:17px 28px;}
     .hero-actions .btn-ghost{text-align:center;border-bottom:none;padding:12px 6px;color:var(--sage-dark);}
