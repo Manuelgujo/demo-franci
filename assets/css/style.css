@@ -313,7 +313,7 @@
     .hero-quote p{margin:0 auto;max-width:24ch;}
     .hero .hero-intro{
       max-width:none;font-size:.8rem;line-height:1.6;color:var(--ink-soft);
-      text-align:justify;hyphens:auto;-webkit-hyphens:auto;lang:it;
+      text-align:justify;hyphens:auto;-webkit-hyphens:auto;
       padding-left:12px;border-left:2px solid var(--rose-soft);
     }
     .hero-actions{flex-direction:column;align-items:stretch;margin-top:26px;gap:6px;}
