@@ -237,6 +237,7 @@
   .hero .hero-name .hero-role{display:block;margin-top:6px;font-size:.78em;font-weight:600;color:var(--sage-dark);letter-spacing:.02em;}
   .hero-quote{margin:0 0 22px;}
   .hero-quote blockquote{margin:0;}
+  .quote-line{display:inline;}
   .hero-quote p{margin:0 auto;font-size:clamp(1.2rem, 2vw, 1.5rem);line-height:1.35;color:var(--ink);
     max-width:22ch;text-align:justify;text-align-last:center;hyphens:auto;-webkit-hyphens:auto;}
   .hero-quote figcaption{
@@ -316,6 +317,7 @@
     .hero-quote{order:1;text-align:center;margin:22px 0 14px;padding-top:16px;border-top:1px solid var(--line);}
     .hero-quote blockquote{margin:0 auto;}
     .hero-quote p{margin:0 auto;max-width:24ch;}
+    .quote-line{display:block;}
 
     .hero .hero-intro{
       order:2;max-width:none;font-size:.8rem;line-height:1.4;color:var(--ink-soft);
@@ -336,11 +338,11 @@
   .chisono-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start;}
   @media (max-width:860px){ .chisono-grid{grid-template-columns:1fr;} }
   .portrait{
-    aspect-ratio:4/5;border-radius:38px 10px 38px 10px;
+    aspect-ratio:2/3;border-radius:38px 10px 38px 10px;
     background:linear-gradient(160deg, var(--sand), var(--rose-soft));
     display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
   }
-  .portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;}
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block;}
   .credentials{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:14px;}
   .credentials li{display:flex;gap:12px;font-size:.97rem;color:var(--ink-soft);align-items:flex-start;}
   .credentials svg{flex:none;width:20px;height:20px;margin-top:2px;color:var(--sage-dark);}
@@ -496,7 +498,7 @@
     .hero-actions .btn-primary{text-align:center;padding:17px 24px;}
     .hero-actions .btn-ghost{align-self:center;}
 
-    .portrait{max-width:240px;aspect-ratio:1/1;margin:0 auto;}
+    .portrait{max-width:300px;aspect-ratio:2/3;margin:0 auto;}
     .servizio{padding:26px 22px;}
 
     .faq-item{padding:4px 0;}
