@@ -349,7 +349,15 @@
   .servizi-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:22px;}
   .servizi-grid > .servizio{flex:0 1 calc((100% - 66px) / 4);min-width:0;}
   @media (max-width:980px){ .servizi-grid > .servizio{flex-basis:calc((100% - 22px) / 2);} }
-  @media (max-width:560px){ .servizi-grid > .servizio{flex-basis:100%;} }
+  /* Telefono: 2 colonne (2x2) invece di una lista lunga, per risparmiare spazio */
+  @media (max-width:560px){
+    .servizi-grid{gap:14px;}
+    .servizi-grid > .servizio{flex-basis:calc((100% - 14px) / 2);}
+    .servizio{padding:22px 16px;}
+    .servizio svg{width:30px;height:30px;margin-bottom:12px;}
+    .servizio h3{font-size:1rem;}
+    .servizio p{font-size:.88rem;}
+  }
   .servizio{
     display:block;text-decoration:none;color:inherit;
     background:var(--paper);border:1px solid var(--line);
