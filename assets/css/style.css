@@ -254,6 +254,13 @@
     transition:transform .18s ease, background .18s ease;
   }
   .btn-primary:hover{background:var(--sage);transform:translateY(-1px);}
+  .btn-whatsapp{
+    display:inline-block;text-decoration:none;font-weight:600;font-size:1rem;font-family:inherit;
+    color:var(--sage-dark);background:transparent;padding:15px 28px;
+    border:1.5px solid var(--sage-dark);border-radius:26px 8px 26px 8px;
+    transition:background .18s ease, color .18s ease;
+  }
+  .btn-whatsapp:hover{background:var(--sage-dark);color:var(--on-sage);}
   .btn-ghost{
     text-decoration:none;color:var(--ink);padding:15px 6px;font-weight:600;
     border-bottom:1.5px solid var(--rose);display:inline-block;
@@ -302,16 +309,16 @@
               mask-image:linear-gradient(to bottom,#000 84%,transparent 100%);
     }
 
-    .hero-actions{order:1;flex-direction:column;align-items:stretch;margin:18px 0 0;gap:6px;}
-    .hero-actions .btn-primary{text-align:center;padding:17px 28px;}
-    .hero-actions .btn-ghost{text-align:center;border-bottom:none;padding:10px 6px;color:var(--sage-dark);}
+    .hero-actions{order:3;flex-direction:column;align-items:stretch;margin:22px 0 0;gap:12px;}
+    .hero-actions .btn-primary,
+    .hero-actions .btn-whatsapp{text-align:center;padding:17px 28px;}
 
-    .hero-quote{order:2;text-align:center;margin:22px 0 14px;padding-top:16px;border-top:1px solid var(--line);}
+    .hero-quote{order:1;text-align:center;margin:22px 0 14px;padding-top:16px;border-top:1px solid var(--line);}
     .hero-quote blockquote{margin:0 auto;}
     .hero-quote p{margin:0 auto;max-width:24ch;}
 
     .hero .hero-intro{
-      order:3;max-width:none;font-size:.8rem;line-height:1.4;color:var(--ink-soft);
+      order:2;max-width:none;font-size:.8rem;line-height:1.4;color:var(--ink-soft);
       text-align:justify;hyphens:auto;-webkit-hyphens:auto;
       padding-left:12px;border-left:2px solid var(--rose-soft);
     }
