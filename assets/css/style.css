@@ -619,3 +619,11 @@ sup.ref a:hover{text-decoration:underline;}
 .refs a{color:var(--sage-dark);}
 .ref-back{margin-left:6px;text-decoration:none;color:var(--ink-soft);}
 .ref-back:hover{color:var(--sage-dark);}
+
+/* ============ Note e ritorni nelle pagine di approfondimento ============
+   Su iOS lo scroll fluido si interrompe se la pagina cambia altezza durante il
+   movimento (font e immagini che si caricano): nelle pagine con note lo scroll
+   è immediato, e il titolo della nota non finisce sotto l'header. */
+html:has(.doc-page){scroll-behavior:auto;}
+html{scroll-padding-top:96px;}
+sup.ref{scroll-margin-top:110px;}
