@@ -327,6 +327,71 @@
     }
   }
 
+  /* ============ Hero desktop (da 861px in su) ============
+     Gerarchia: nome (h1) > qualifica > citazione > introduzione > pulsanti >
+     qualifiche. Tutto a sinistra, allineato; i papaveri a destra su un alone
+     caldo. L'hero riempie la prima schermata, così pulsanti e contatto sono
+     visibili senza scorrere. Lo smartphone non è toccato (regole nel proprio @media). */
+  .hero-trust{display:none;}
+  @media (min-width:861px){
+    .hero{display:flex;align-items:center;min-height:min(calc(100svh - 68px), 820px);padding:36px 0 52px;}
+    .hero .wrap{width:100%;}
+    .hero-grid{grid-template-columns:minmax(0,1.22fr) minmax(0,.78fr);gap:56px;align-items:center;}
+
+    .hero .hero-name{
+      font-size:clamp(2.3rem, 3.7vw, 3.2rem);font-weight:450;line-height:1.06;
+      letter-spacing:-.02em;margin:0 0 14px;text-wrap:balance;
+    }
+    .hero .hero-name .hero-role{
+      margin-top:12px;font-family:'Karla', sans-serif;font-size:1.02rem;font-weight:700;
+      letter-spacing:.02em;line-height:1.4;color:var(--sage-dark);
+    }
+    .hero .hero-name .hero-role br{display:none;}
+
+    .hero-quote{margin:26px 0 18px;text-align:left;}
+    .hero-quote::before{content:"";display:block;width:44px;height:2px;background:var(--rose);margin-bottom:18px;}
+    .hero-quote p{
+      margin:0;max-width:30ch;font-family:'Fraunces', serif;font-weight:400;
+      font-size:clamp(1.45rem, 2.1vw, 1.8rem);line-height:1.32;letter-spacing:-.01em;
+      text-align:left;text-align-last:auto;hyphens:manual;-webkit-hyphens:manual;
+      color:var(--ink);text-wrap:balance;
+    }
+    .hero-quote figcaption{justify-content:flex-start;margin-top:12px;font-size:.74rem;}
+    .hero-quote figcaption::after{display:none;}
+
+    .hero .hero-intro{
+      max-width:54ch;margin:0;font-size:1.06rem;line-height:1.7;color:var(--ink-soft);
+      padding-left:0;border-left:none;
+    }
+
+    .hero-actions{margin-top:30px;gap:14px;flex-wrap:wrap;}
+    .hero-actions .btn-primary,
+    .hero-actions .btn-whatsapp{padding:15px 26px;font-size:.98rem;}
+
+    .hero-trust{
+      display:flex;flex-wrap:wrap;gap:10px 26px;list-style:none;margin:32px 0 0;padding:22px 0 0;
+      border-top:1px solid var(--line);font-size:.88rem;color:var(--ink-soft);
+    }
+    .hero-trust li{display:flex;align-items:center;gap:8px;}
+    .hero-trust svg{width:18px;height:18px;flex:none;color:var(--sage-dark);}
+
+    .hero-art{max-width:470px;margin:0 0 0 auto;}
+    .hero-art::before{
+      content:"";position:absolute;left:50%;top:4%;width:100%;aspect-ratio:1;
+      transform:translateX(-50%);border-radius:50%;
+      background:radial-gradient(circle, var(--rose-soft) 0%, transparent 68%);opacity:.8;
+    }
+    .hero-art svg{position:relative;}
+  }
+  /* Desktop stretto / tablet in orizzontale: pulsanti più compatti, restano su una riga */
+  @media (min-width:861px) and (max-width:1100px){
+    .hero-grid{gap:40px;}
+    .hero-actions{gap:10px;}
+    .hero-actions .btn-primary,
+    .hero-actions .btn-whatsapp{padding:14px 18px;font-size:.93rem;}
+    .hero-trust{gap:8px 20px;font-size:.86rem;}
+  }
+
   /* ============ Section headings ============ */
   .sec-head{max-width:640px;margin-bottom:52px;}
   .sec-head h2{font-size:clamp(1.7rem,3vw,2.35rem);}
