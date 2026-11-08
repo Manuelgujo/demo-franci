@@ -51,7 +51,7 @@ description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia in
       </figure>
       <p class="lede measure hero-intro">Non esistono parti di noi sbagliate, ma solo aspetti della nostra storia che talvolta fatichiamo a comprendere o ad accogliere e che possono diventare fonte di sofferenza. <em>Attraversare</em>, in terapia, implica dare spazio anche a queste parti, concedendosi la possibilità di ascoltarle, esplorarle e comprenderle, senza giudizio e senza la fretta di volerle cambiare.</p>
       <div class="hero-actions">
-        <a href="#prenotazione" class="btn-primary">Prenota un primo colloquio gratuito</a>
+        <a href="#contatti" class="btn-primary">Prenota un primo colloquio gratuito</a>
         <a href="https://wa.me/{{ site.nap.phone_link | remove: '+' }}" class="btn-whatsapp" target="_blank" rel="noopener">Contattami su WhatsApp</a>
       </div>
     </div>
@@ -90,6 +90,10 @@ description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia in
         <li class="sub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l6 6L20 6"/></svg> Metacognizione psicodinamica</li>
       </ul>
     </div>
+    <div class="chisono-links">
+      <a class="btn-outline" href="{{ '/curriculum/' | relative_url }}">Scopri il mio curriculum</a>
+      <a class="btn-outline" href="{{ '/orientamento/' | relative_url }}">Scopri il mio orientamento</a>
+    </div>
   </div>
 </section>
 
@@ -125,7 +129,7 @@ description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia in
       <div class="step">
         <div class="num">1</div>
         <h3>Primo contatto</h3>
-        <p>Scrivimi attraverso il form di richiesta o su WhatsApp: ti risponderò entro 48 ore per fissare un primo colloquio.</p>
+        <p>Contattami per telefono, su WhatsApp o via email: ti risponderò entro 48 ore per fissare un primo colloquio.</p>
       </div>
       <div class="step">
         <div class="num">2</div>
@@ -166,14 +170,14 @@ description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia in
   </div>
 </section>
 
-<!-- ===== PRENOTAZIONE ===== -->
-<section id="prenotazione">
-  <div class="wrap booking-wrap">
-    <div>
-      <div class="sec-head" style="margin-bottom:24px;">
-        <h2>Prenota un primo colloquio</h2>
-        <p>Compila il form con qualche informazione: ti risponderò personalmente entro 48 ore per fissare insieme data e modalità dell'incontro.</p>
-      </div>
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:24px;">
+      <h2>Domande frequenti</h2>
+      <p>Le domande che mi vengono fatte più spesso prima del primo colloquio.</p>
+    </div>
+    <div class="faq-narrow">
       <div class="faq-wrap">
         <details class="faq-item">
           <summary>Le sedute si svolgono solo in studio?<span class="plus">+</span></summary>
@@ -189,51 +193,6 @@ description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia in
         </details>
       </div>
     </div>
-    <div>
-      <form class="booking-form" id="booking-form" novalidate>
-        <div class="hp" aria-hidden="true"><label for="sito">Lascia vuoto questo campo</label><input type="text" id="sito" name="sito" tabindex="-1" autocomplete="off"></div>
-        <div class="row2">
-          <div class="field"><label for="nome">Nome</label><input type="text" id="nome" name="nome" autocomplete="given-name" required></div>
-          <div class="field"><label for="cognome">Cognome</label><input type="text" id="cognome" name="cognome" autocomplete="family-name" required></div>
-        </div>
-        <div class="row2">
-          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required></div>
-          <div class="field"><label for="telefono">Telefono</label><input type="tel" id="telefono" name="telefono" autocomplete="tel"></div>
-        </div>
-        <div class="row2">
-          <div class="field">
-            <label for="motivo">Motivo della richiesta</label>
-            <select id="motivo" name="motivo">
-              <option>Percorso individuale</option>
-              <option>Terapia di coppia</option>
-              <option>Ansia e stress</option>
-              <option>Giovani adulti</option>
-              <option>Altro</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="fascia">Fascia oraria preferita</label>
-            <select id="fascia" name="fascia">
-              <option>Mattina</option><option>Pomeriggio</option><option>Sera</option>
-            </select>
-          </div>
-        </div>
-        <div class="field">
-          <label for="messaggio">Vuoi aggiungere qualcosa? (facoltativo)</label>
-          <textarea id="messaggio" name="messaggio" placeholder="Scrivi qui, se lo desideri, qualche riga su cosa ti porta a scrivermi."></textarea>
-          <p class="field-hint">Per favore non inserire qui informazioni sanitarie dettagliate: ne parleremo insieme durante il primo colloquio.</p>
-        </div>
-        <div class="field consent">
-          <label class="check"><input type="checkbox" id="consenso" name="consenso" required><span>Ho letto l'<a href="{{ '/privacy-policy/' | relative_url }}">informativa sulla privacy</a> e acconsento al trattamento dei dati che inserisco per essere ricontattato/a.</span></label>
-        </div>
-        <button type="submit" class="btn-primary" style="width:100%;">Invia richiesta</button>
-        <p class="form-note">Riceverai una risposta via email entro 48 ore. In alternativa puoi scrivere direttamente a <a href="mailto:{{ site.nap.email }}" style="color:inherit;">{{ site.nap.email }}</a>.</p>
-      </form>
-      <div id="booking-success" role="status" aria-live="polite">
-        <h3 style="margin-bottom:10px;">Richiesta inviata</h3>
-        <p style="color:var(--ink-soft);margin:0;">Grazie<span id="success-name"></span>, la tua richiesta è stata registrata. Ti risponderò personalmente entro 48 ore all'indirizzo email indicato per fissare il primo colloquio.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -243,12 +202,15 @@ description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia in
     <div>
       <div class="sec-head" style="margin-bottom:24px;">
         <h2>Contatti</h2>
-        <p>Puoi scrivermi o chiamarmi direttamente, oltre a usare il form di prenotazione.</p>
+        <p>Scegli il modo che preferisci per mettersi in contatto con me: ti risponderò entro 48 ore per fissare un primo colloquio.</p>
+      </div>
+      <div class="contact-cards">
+        <a class="contact-card" href="tel:{{ site.nap.phone_link }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 3.2 2 2 0 0 1 4.1 1h2a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8.1 8.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z"/></svg><span class="cc-text"><strong>Chiama</strong><small>{{ site.nap.phone }}</small></span></a>
+        <a class="contact-card" href="https://wa.me/{{ site.nap.phone_link | remove: '+' }}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.3A8.5 8.5 0 1 1 21 11.5z"/></svg><span class="cc-text"><strong>Contattami su WhatsApp</strong><small>Chat diretta dal tuo telefono</small></span></a>
+        <a class="contact-card" href="mailto:{{ site.nap.email }}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg><span class="cc-text"><strong>Mandami un’email</strong><small>{{ site.nap.email }}</small></span></a>
       </div>
       <ul class="contact-list">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><span>{{ site.nap.street }}, {{ site.nap.postal_code }} {{ site.nap.city }} ({{ site.nap.province }})</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 6l-10 7L2 6"/><path d="M2 6h20v12H2z"/></svg><a href="mailto:{{ site.nap.email }}">{{ site.nap.email }}</a></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 3.2 2 2 0 0 1 4.1 1h2a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L7.1 8.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg><a href="tel:{{ site.nap.phone_link }}">{{ site.nap.phone }}</a></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span>Lun–Ven, 9:00–19:00 (studio e online)</span></li>
       </ul>
     </div>
@@ -258,4 +220,3 @@ description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia in
   </div>
 </section>
 
-<script src="{{ '/assets/js/booking.js' | relative_url }}" defer></script>
