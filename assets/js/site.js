@@ -20,3 +20,13 @@
   const y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 })();
+
+/* Pallino WhatsApp: si nasconde quando la sezione Contatti entra nello schermo. */
+(function () {
+  const fab = document.querySelector('.wa-float');
+  const contatti = document.getElementById('contatti');
+  if (!fab || !contatti || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver((entries) => {
+    entries.forEach((e) => fab.classList.toggle('is-hidden', e.isIntersecting));
+  }, { threshold: 0.2 }).observe(contatti);
+})();

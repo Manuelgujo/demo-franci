@@ -640,3 +640,20 @@ sup.ref{scroll-margin-top:110px;}
 }
 .pdf-viewer canvas{display:block;max-width:100%;height:auto;background:#fff;border-radius:4px;box-shadow:0 6px 18px var(--shadow);}
 .pdf-status{margin:24px 0;font-size:.95rem;color:var(--ink-soft);text-align:center;}
+
+/* ============ Pallino WhatsApp (solo mobile) ============
+   In basso a destra, sempre visibile; sparisce quando la sezione Contatti
+   è sullo schermo (gestito in site.js). Su desktop non compare. */
+.wa-float{display:none;}
+@media (max-width:860px){
+  .wa-float{
+    display:flex;align-items:center;justify-content:center;
+    position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom, 0px));z-index:60;
+    width:56px;height:56px;border-radius:50%;
+    background:#25D366;color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.22);
+    transition:opacity .25s ease, transform .25s ease;
+  }
+  .wa-float svg{width:28px;height:28px;}
+  .wa-float:focus-visible{outline:3px solid var(--focus);outline-offset:3px;}
+  .wa-float.is-hidden{opacity:0;transform:scale(.8);pointer-events:none;}
+}
