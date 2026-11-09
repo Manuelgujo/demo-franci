@@ -1,10 +1,9 @@
 ---
 layout: default
-description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia integrata. Percorsi individuali, di coppia e per giovani adulti a Padova e online. Prenota un primo colloquio."
+description: "Francesca Pirazzo, psicologa specializzata in psicoterapia integrata. Percorsi individuali, di coppia e per giovani adulti a Padova e online. Prenota un primo colloquio."
 ---
 
-<!-- Orari: tenere allineati con la riga "Lun–Ven, 9:00–19:00" nella sezione Contatti.
-     Dati strutturati Psychologist: generati da site.nap invece di essere
+<!-- Dati strutturati Psychologist: generati da site.nap invece di essere
      scritti a mano qui, cosi' restano sempre allineati a footer/contatti/
      privacy policy (un solo punto da aggiornare, come da progetto). -->
 <script type="application/ld+json">
@@ -29,12 +28,6 @@ description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia in
   "alumniOf": {
     "@type": "EducationalOrganization",
     "name": {{ site.nap.school | jsonify }}
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    "opens": "09:00",
-    "closes": "19:00"
   }{% if site.nap.same_as.size > 0 %},
   "sameAs": {{ site.nap.same_as | jsonify }}{% endif %}
 }
@@ -44,7 +37,7 @@ description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia in
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1 class="hero-name">Dott.ssa Francesca Pirazzo<span class="hero-role">psicologa psicoterapeuta <br>a Padova e online</span></h1>
+      <h1 class="hero-name">Dott.ssa Francesca Pirazzo<span class="hero-role">psicologa <br>a Padova e online</span></h1>
       <figure class="hero-quote">
         <blockquote><p>“La migliore via d’uscita, <span class="quote-line">è sempre <em>attraverso</em>”</span></p></blockquote>
         <figcaption>R. Frost</figcaption>
@@ -72,12 +65,12 @@ description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia in
   <div class="wrap chisono-grid">
     <div>
       <div class="portrait">
-        <img src="{{ '/assets/img/francesca-chi-sono.jpg' | relative_url }}" alt="Francesca Pirazzo, psicoterapeuta" width="1200" height="1754" loading="lazy" decoding="async">
+        <img src="{{ '/assets/img/francesca-chi-sono.jpg' | relative_url }}" alt="Francesca Pirazzo, psicologa" width="1200" height="1754" loading="lazy" decoding="async">
       </div>
     </div>
     <div>
       <div class="sec-head" style="margin-bottom:20px;"><h2>Chi sono</h2></div>
-      <p class="measure-wide">Mi presento, sono la Dott.ssa Francesca Pirazzo e sono una psicologa clinica. Attualmente sono una psicoterapeuta in formazione presso la <a href="https://psicoterapiaintegrata.it/scuola-psicoterapia-integrata/" target="_blank" rel="noopener">Scuola di Psicoterapia Integrata (SPI)</a>, che offre un approccio che permette di non seguire un unico modello rigido di terapia, ma di co-costruire insieme alla persona il percorso più adatto a lei, utilizzando tecniche rigorosamente <em>Evidence Based</em>.</p>
+      <p class="measure-wide">Mi presento, sono la Dott.ssa Francesca Pirazzo e sono una psicologa clinica. Attualmente sono una psicologa in formazione presso la <a href="https://psicoterapiaintegrata.it/scuola-psicoterapia-integrata/" target="_blank" rel="noopener">Scuola di Psicoterapia Integrata (SPI)</a>, che offre un approccio che permette di non seguire un unico modello rigido di terapia, ma di co-costruire insieme alla persona il percorso più adatto a lei, utilizzando tecniche rigorosamente <em>Evidence Based</em>.</p>
       <p class="measure-wide">Offro interventi rivolti sia all'età dello sviluppo che all'età adulta di supporto psicologico e di psicoterapia per difficoltà legate all’ansia, alla disregolazione emotiva e alle problematiche interpersonali o di coppia.<br>Inoltre, mi occupo di Psicologia Perinatale e Psicologia scolastica: gestisco percorsi di sostegno alla genitorialità, supporto psicologico per adolescenti e consulenze di tutoraggio per studenti con DSA e ADHD.</p>
       <ul class="credentials">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12l6 6L20 6"/></svg> Iscritta all’Albo degli Psicologi del Veneto (n. 15280)</li>
@@ -211,7 +204,7 @@ description: "Francesca Pirazzo, psicoterapeuta specializzata in psicoterapia in
       </div>
       <ul class="contact-list">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><span>{{ site.nap.street }}, {{ site.nap.postal_code }} {{ site.nap.city }} ({{ site.nap.province }})</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span>Lun–Ven, 9:00–19:00 (studio e online)</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span>Lun–Ven (studio e online)</span></li>
       </ul>
     </div>
     <div class="map-illo" aria-hidden="true">

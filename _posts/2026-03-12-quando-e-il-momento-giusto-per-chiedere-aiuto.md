@@ -1,7 +1,7 @@
 ---
 title: "Quando è il momento giusto per chiedere aiuto?"
-description: "Non esiste una soglia di sofferenza da superare prima di potersi rivolgere a uno psicoterapeuta."
-excerpt: "Non esiste una soglia di sofferenza da superare prima di potersi rivolgere a uno psicoterapeuta..."
+description: "Non esiste una soglia di sofferenza da superare prima di potersi rivolgere a uno psicologa."
+excerpt: "Non esiste una soglia di sofferenza da superare prima di potersi rivolgere a uno psicologa..."
 categories:
   - Consapevolezza
 ---

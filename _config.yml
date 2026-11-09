@@ -1,6 +1,6 @@
 title: "Dott.ssa Francesca Pirazzo"
-tagline: "Psicoterapeuta a Padova"   # titolo scheda della home: «Dott.ssa Francesca Pirazzo | Psicoterapeuta a Padova»
-description: "Psicoterapeuta specializzata in psicoterapia integrata a Padova. Percorsi individuali, di coppia e per giovani adulti, in studio e online."
+tagline: "Psicologa a Padova"   # titolo scheda della home: «Dott.ssa Francesca Pirazzo | Psicologa a Padova»
+description: "Psicologa specializzata in psicoterapia integrata a Padova. Percorsi individuali, di coppia e per giovani adulti, in studio e online."
 url: "https://www.francescapirazzo.it"
 baseurl: ""
 lang: it
@@ -19,7 +19,7 @@ twitter:
 # ============================================================
 nap:
   name: "Dott.ssa Francesca Pirazzo"
-  street: "Via degli Ontani 12"
+  street: "Corso Vittorio Emanuele II n. 150"
   postal_code: "35100"
   city: "Padova"
   province: "PD"
@@ -27,8 +27,8 @@ nap:
   phone: "+39 000 000 0000"
   phone_link: "+390000000000"
   email: "info@francescapirazzo.it"
-  piva: "00000000000"
-  albo: "Iscrizione Albo degli Psicologi n. 00000"
+  piva: "05705240280"
+  albo: "Iscrizione Albo degli Psicologi del Veneto n. 15280"
   school: "Scuola di Psicoterapia Integrata"
   # Profili social reali (quando pronti): finiscono nei dati strutturati (sameAs).
   # same_as:
