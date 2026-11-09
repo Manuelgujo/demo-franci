@@ -9,7 +9,7 @@
 
 backend:
   name: github
-  repo: Manuelgujo/demo-franci
+  repo: frapiraz/fp_sito_web
   branch: main
   # Nessun OAuth backend necessario: Francesca farà login con un
   # Personal Access Token di GitHub (vedi README per come generarlo).
