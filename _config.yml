@@ -1,8 +1,8 @@
 title: "Dott.ssa Francesca Pirazzo"
 tagline: "Psicoterapeuta a Padova"   # titolo scheda della home: «Dott.ssa Francesca Pirazzo | Psicoterapeuta a Padova»
 description: "Psicoterapeuta specializzata in psicoterapia integrata a Padova. Percorsi individuali, di coppia e per giovani adulti, in studio e online."
-url: "https://frapiraz.github.io"
-baseurl: "/fp_sito_web"   # da rimuovere (baseurl: "") quando si collega il dominio definitivo
+url: "https://www.francescapirazzo.it"
+baseurl: ""
 lang: it
 # Immagine di anteprima per Google/social (Open Graph e Twitter Card, via jekyll-seo-tag)
 image: /assets/img/og-image.png
