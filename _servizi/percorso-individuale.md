@@ -18,7 +18,7 @@ faq:
   - q: Posso chiedere sostegno psicologico anche durante la gravidanza?
     a: Certamente. La gravidanza può portare con sé preoccupazioni, insicurezze, cambiamenti corporei e timori legati al parto o alla futura genitorialità. Uno spazio di ascolto può aiutare a comprendere e affrontare queste emozioni, senza giudizio.
   - q: Il sostegno psicologico perinatale è rivolto anche ai papà e ai partner?
-    a: Sì\. Anche i partner possono vivere cambiamenti emotivi, nuove responsabilità e difficoltà nell’adattamento alla genitorialità. Il sostegno psicologico può offrire uno spazio per esplorare questi vissuti e affrontare le trasformazioni personali e relazionali.
+    a: Sì. Anche i partner possono vivere cambiamenti emotivi, nuove responsabilità e difficoltà nell’adattamento alla genitorialità. Il sostegno psicologico può offrire uno spazio per esplorare questi vissuti e affrontare le trasformazioni personali e relazionali.
   - q: Qual è la differenza tra baby blues e depressione post partum?
     a: Il baby blues è una condizione transitoria che può comparire nei primi giorni dopo il parto, caratterizzata da maggiore sensibilità emotiva, pianto e sbalzi d’umore, e tende a risolversi entro circa due settimane. La depressione post partum presenta invece sintomi più persistenti e può incidere significativamente sul benessere e sulla quotidianità. In presenza di segnali di sofferenza è importante rivolgersi a un professionista per una valutazione adeguata.
   - q: Quando può essere utile rivolgersi a una psicologa perinatale?
@@ -27,7 +27,7 @@ faq:
     a: Sì, la nascita di un bambino può accompagnarsi a emozioni molto diverse, anche apparentemente contraddittorie\. Gioia, paura, stanchezza e tristezza possono coesistere\. Se queste emozioni diventano persistenti, particolarmente intense o interferiscono con la quotidianità, può essere importante cercare un sostegno professionale\.
   - q: È normale sentire di aver perso una parte di sé dopo essere diventati genitori?
     a: La genitorialità può modificare profondamente abitudini, priorità e percezione di sé. Può capitare di sentirsi distanti dalla propria identità precedente o di faticare a riconoscere i propri bisogni. Il percorso psicologico può aiutare a ritrovare spazio per la propria individualità, integrandola con il nuovo ruolo genitoriale.
-  - q: '### Posso rivolgermi a una psicologa perinatale anche per difficoltà nella gestione del neonato?'
+  - q: Posso rivolgermi a una psicologa perinatale anche per difficoltà nella gestione del neonato?
     a: Certo. I primi mesi di vita di un bambino possono portare con sé dubbi e difficoltà legati al pianto, al sonno, alla regolazione emotiva e alla comprensione dei suoi bisogni. Il sostegno psicologico perinatale offre uno spazio per esplorare queste fatiche, comprendere meglio i segnali del neonato e favorire la costruzione di una relazione affettiva serena, nel rispetto dei tempi e delle caratteristiche di ciascuno.
 published: true
 ---
