@@ -2,7 +2,7 @@
 card_title: Ansia, stress e attacchi di panico
 order: 10
 icon: leaf
-card_excerpt: Sostegno psicologico per comprendere i meccanismi dell’ansia, riconoscere i pensieri e le situazioni che la alimentano e sviluppare strategie per gestirne i sintomi e affrontare le difficoltà quotidiane.
+card_excerpt: Un percorso per comprendere l'ansia e sviluppare strategie per gestirla.
 title: Ansia, stress e attacchi di panico | Psicologa a Padova
 description: Ansia, stress e attacchi di panico possono influenzare il tuo benessere. Scopri come un percorso di sostegno psicologico può aiutarti a comprenderli e gestirli.
 h1: Un percorso per ansia, stress e attacchi di panico
