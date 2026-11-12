@@ -1,4 +1,4 @@
 ---
-title: Ansia e stress
-slug: ansia-e-stress
+title: Ansia, stress e attacchi di panico
+slug: Ansia-stress-attacchi di panico
 ---
