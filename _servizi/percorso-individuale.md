@@ -2,7 +2,7 @@
 card_title: Perinatalità
 order: 30
 icon: home
-card_excerpt: Uno spazio di ascolto per affrontare i cambiamenti emotivi della gravidanza e del post partum, ritrovando un equilibrio tra genitorialità, benessere e identità personale.
+card_excerpt: Sostegno durante la gravidanza e il post partum per ritrovare un equilibrio tra genitorialità e identità personale.
 title: Psicologa perinatale a Padova | Gravidanza e Post Partum
 description: Sostegno psicologico perinatale a Padova per gravidanza, post partum, difficoltà emotive e genitorialità. Uno spazio per ritrovare equilibrio e benessere.
 h1: 'Gravidanza e genitorialità: attraversare il cambiamento'
