@@ -2,7 +2,7 @@
 card_title: Psicologia Scolastica
 order: 20
 icon: chat
-card_excerpt: Accompagnamento attraverso le difficoltà scolastiche, emotive e relazionali, valorizzando le proprie risorse e sviluppando strategie personalizzate.
+card_excerpt: Sostegno a bambini, adolescenti e studenti universitari nelle difficoltà scolastiche, emotive e relazionali.
 title: Psicologa Scolastica a Padova
 description: Sostegno psicologico scolastico per ansia, bullismo, DSA, ADHD, BES, difficoltà di apprendimento, metodo di studio e orientamento nelle scelte scolastiche.
 h1: Un percorso di Psicologia Scolastica
