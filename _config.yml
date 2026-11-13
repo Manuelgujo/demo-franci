@@ -31,9 +31,9 @@ nap:
   albo: "Iscrizione Albo degli Psicologi del Veneto n. 15280"
   school: "Scuola di Psicoterapia Integrata"
   # Profili social reali (quando pronti): finiscono nei dati strutturati (sameAs).
-  # same_as:
-  #   - "https://www.instagram.com/..."
-  #   - "https://www.linkedin.com/in/..."
+  same_as:
+    - "https://www.instagram.com/francescapirazzo.psicologa/"
+    - "https://www.linkedin.com/in/francesca-pirazzo-26a8a521a/"
 
 plugins:
   - jekyll-seo-tag
