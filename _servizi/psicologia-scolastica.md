@@ -3,7 +3,7 @@ card_title: Psicologia Scolastica
 order: 20
 icon: chat
 card_excerpt: Sostegno a bambini, adolescenti e studenti universitari nelle difficoltà scolastiche, emotive e relazionali.
-title: Psicologa Scolastica a Padova
+title: Psicologa scolastica a Padova
 description: Sostegno psicologico scolastico per ansia, bullismo, DSA, ADHD, BES, difficoltà di apprendimento, metodo di studio e orientamento nelle scelte scolastiche.
 h1: Un percorso di Psicologia Scolastica
 lede: Le difficoltà scolastiche non sono riducibili a una semplice questione di rendimento. Cosa succede quando questo importante percorso, anziché essere un’occasione di crescita, diventa fonte di ansia, insicurezze e frustrazione?
@@ -20,6 +20,8 @@ faq:
   - q: Posso iniziare anche solo per un periodo limitato?
     a: Sì, è possibile costruire un percorso breve e mirato su una decisione o un bisogno specifico.
 published: true
+redirect_from:
+  - /servizi/percorso-giovani-adulti/
 ---
 
 La scuola rappresenta uno dei contesti più importanti per lo sviluppo personale, emotivo e relazionale di bambini e adolescenti. Non è soltanto il luogo in cui si acquisiscono conoscenze e competenze, ma anche uno spazio in cui si costruisce la propria identità, si sperimentano le prime importanti forme di autonomia, si sviluppa la fiducia nelle proprie capacità e si impara a entrare in relazione con gli altri. Dunque, le esperienze che permeano il contesto scolastico influenzano in modo determinante le sfumature con cui gli studenti percepiscono se stessi, le proprie risorse e il proprio valore. È importante sottolineare che le difficoltà che i ragazzi devono fronteggiare possono manifestarsi anche attraverso ansia da prestazione, paura del giudizio, difficoltà di concentrazione e organizzazione, problemi nelle relazioni con i coetanei, sentimenti di esclusione dal gruppo di pari, episodi di bullismo o sentimenti di inadeguatezza. Anche la scelta del percorso di studi può diventare fonte di preoccupazione, soprattutto quando le aspettative personali, familiari e sociali sembrano difficili da conciliare.

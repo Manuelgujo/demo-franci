@@ -3,7 +3,7 @@ card_title: Perinatalità
 order: 30
 icon: home
 card_excerpt: Sostegno durante la gravidanza e il post partum per ritrovare un equilibrio tra genitorialità e identità personale.
-title: Psicologa perinatale a Padova | Gravidanza e Post Partum
+title: Psicologa perinatale a Padova
 description: Sostegno psicologico perinatale a Padova per gravidanza, post partum, difficoltà emotive e genitorialità. Uno spazio per ritrovare equilibrio e benessere.
 h1: 'Gravidanza e genitorialità: attraversare il cambiamento'
 lede: Diventare genitori è un cambiamento profondo, che porta con sé nuove emozioni, responsabilità e modi di riconoscersi. Ma chi si prende cura di noi mentre impariamo a prenderci cura di qualcun altro?
@@ -30,6 +30,8 @@ faq:
   - q: Posso rivolgermi a una psicologa perinatale anche per difficoltà nella gestione del neonato?
     a: Certo. I primi mesi di vita di un bambino possono portare con sé dubbi e difficoltà legati al pianto, al sonno, alla regolazione emotiva e alla comprensione dei suoi bisogni. Il sostegno psicologico perinatale offre uno spazio per esplorare queste fatiche, comprendere meglio i segnali del neonato e favorire la costruzione di una relazione affettiva serena, nel rispetto dei tempi e delle caratteristiche di ciascuno.
 published: true
+redirect_from:
+  - /servizi/percorso-individuale/
 ---
 
 La gravidanza e il periodo successivo alla nascita rappresentano fasi di profonda trasformazione, che coinvolgono non soltanto il corpo, ma anche l’identità personale e le relazioni interpersonali. Nell’immaginario collettivo, la maternità e la genitorialità vengono principalmente associate a sentimenti di gioia, realizzazione e amore incondizionato. Eppure, l’esperienza reale può essere molto più complessa. Accanto all’entusiasmo e alla felicità possono emergere paura, tristezza, irritabilità, senso di inadeguatezza, solitudine o difficoltà nel riconoscersi nel proprio nuovo ruolo. Anche il rapporto con il partner, con il proprio corpo e con le aspettative familiari e sociali può cambiare, richiedendo la ricerca di nuovi equilibri. Da un lato, diventare genitori non significa smettere di essere se stessi, ma dall'altro, tra nuove responsabilità, aspettative e bisogni da accogliere, può capitare di sentirsi distanti dalla persona che si era prima. È bene sottolineare che queste esperienze non riguardano necessariamente soltanto la madre, ma possono coinvolgere anche il partner e la relazione di coppia.

@@ -4,8 +4,7 @@ order: 40
 icon: users
 card_excerpt: Per coppie che vogliono ritrovare un dialogo autentico o attraversare insieme un momento di crisi.
 title: Terapia di coppia a Padova
-description: Terapia di coppia a Padova e online con la Dott.ssa Francesca Pirazzo, per coppie che vogliono ritrovare
-  un dialogo autentico o attraversare insieme un momento di crisi.
+description: "Terapia di coppia a Padova e online con la Dott.ssa Francesca Pirazzo: uno spazio per ritrovare un dialogo autentico o attraversare insieme un momento di crisi."
 h1: Terapia di coppia a Padova
 lede: Uno spazio protetto per ritrovare un dialogo autentico, o per attraversare insieme un momento di crisi.
 per_chi:

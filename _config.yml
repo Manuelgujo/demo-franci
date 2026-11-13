@@ -39,6 +39,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-redirect-from
 
 # URL puliti per gli articoli: /blog/nome-articolo/
 # invece del default di Jekyll /anno/mese/giorno/nome-articolo.html
@@ -60,6 +61,8 @@ defaults:
       type: "servizi"
     values:
       layout: "servizio"
+      seo:
+        type: "WebPage"
   - scope:
       path: ""
     values:

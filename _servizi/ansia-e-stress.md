@@ -3,7 +3,7 @@ card_title: Ansia, stress e attacchi di panico
 order: 10
 icon: leaf
 card_excerpt: Un percorso per comprendere l'ansia e sviluppare strategie per gestirla.
-title: Ansia, stress e attacchi di panico | Psicologa a Padova
+title: Psicologa per ansia a Padova
 description: Ansia, stress e attacchi di panico possono influenzare il tuo benessere. Scopri come un percorso di sostegno psicologico può aiutarti a comprenderli e gestirli.
 h1: Un percorso per ansia, stress e attacchi di panico
 lede: L’ansia nasce per proteggerci, ma cosa succede quando è proprio lei a farci sentire in pericolo? Comprendere ciò che la alimenta è il primo passo per imparare ad attraversarla, senza lasciare che sia lei a guidare le nostre scelte. Uno spazio di ascolto per chi si sente sopraffatto dai pensieri.
