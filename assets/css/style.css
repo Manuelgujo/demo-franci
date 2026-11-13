@@ -400,6 +400,7 @@
     display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
   }
   .portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block;}
+.portrait picture{display:block;width:100%;height:100%;}
   .credentials{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:14px;}
   .credentials li{display:flex;gap:12px;font-size:.97rem;color:var(--ink-soft);align-items:flex-start;}
   .credentials li.sub{padding-left:32px;}

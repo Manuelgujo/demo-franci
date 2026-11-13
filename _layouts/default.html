@@ -18,7 +18,7 @@
      esterno (Web3forms, Formspree, ecc.), aggiungere il suo dominio a
      connect-src e/o form-action qui sotto, altrimenti l'invio verra'
      bloccato silenziosamente dal browser. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://gc.zgo.at; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://frapiraz.goatcounter.com; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
 
 <!-- jekyll-seo-tag genera automaticamente: title, meta description,
      canonical, Open Graph, Twitter Card — l'equivalente di Yoast,
@@ -49,5 +49,7 @@
 <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
 <script src="{{ '/assets/js/roots.js' | relative_url }}" defer></script>
 <a class="wa-float" href="https://wa.me/{{ site.nap.phone_link | remove: '+' }}" target="_blank" rel="noopener" aria-label="Contattami su WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.3A8.5 8.5 0 1 1 21 11.5z"/></svg></a>
+<script data-goatcounter="https://frapiraz.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
