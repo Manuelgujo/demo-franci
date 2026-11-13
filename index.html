@@ -1,6 +1,6 @@
 ---
 layout: default
-description: "Francesca Pirazzo, psicologa specializzata in psicoterapia integrata. Percorsi individuali, di coppia e per giovani adulti a Padova e online. Prenota un primo colloquio."
+description: "Francesca Pirazzo, psicologa e psicoterapeuta in formazione in Psicoterapia Integrata. Individuale, di coppia, adulti e adolescenti, scolastica, perinatale a Padova e online."
 ---
 
 <!-- Dati strutturati Psychologist: generati da site.nap invece di essere
@@ -14,7 +14,10 @@ description: "Francesca Pirazzo, psicologa specializzata in psicoterapia integra
   "url": {{ '/' | absolute_url | jsonify }},
   "description": {{ page.description | jsonify }},
   "image": {{ site.image | absolute_url | jsonify }},
-  "areaServed": {{ site.nap.city | jsonify }},
+  "areaServed": {
+    "@type": "Place",
+    "name": {{ site.nap.city | jsonify }}
+  },
   "telephone": {{ site.nap.phone | jsonify }},
   "email": {{ site.nap.email | jsonify }},
   "address": {
