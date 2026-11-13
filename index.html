@@ -210,8 +210,10 @@ description: "Francesca Pirazzo, psicologa e psicoterapeuta in formazione in Psi
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span>Lun–Ven (studio e online)</span></li>
       </ul>
     </div>
-    <div class="map-illo" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.8"/></svg>
+    <div class="map-illo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.8"/></svg>
+      {% capture indirizzo %}{{ site.nap.street }}, {{ site.nap.postal_code }} {{ site.nap.city }}{% endcapture %}
+      <a class="btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query={{ indirizzo | url_encode }}" target="_blank" rel="noopener">Vedi la posizione su Google Maps</a>
     </div>
   </div>
 </section>

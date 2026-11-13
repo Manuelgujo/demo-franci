@@ -501,7 +501,9 @@
     background:var(--sand);border-radius:26px;aspect-ratio:4/3;
     display:flex;align-items:center;justify-content:center;
   }
-  .map-illo svg{width:44%;color:var(--sage-dark);}
+  .map-illo svg{width:30%;color:var(--sage-dark);}
+.map-illo{flex-direction:column;gap:20px;padding:24px;text-align:center;}
+.map-illo .btn-outline{background:var(--paper);}
 
   /* ============ Footer ============ */
   footer{border-top:1px solid var(--line);padding:48px 0 32px;background:color-mix(in srgb, var(--paper-soft) 55%, transparent);}
